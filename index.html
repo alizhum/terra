@@ -1201,7 +1201,7 @@
         </section>
         <section class="section section--gray section-gap events">
             <div class="container">
-                <div class="section__header section__header--half">
+                <div class="section__header section__header--half events__header">
                     <div class="section__header-heading">
                         <h2 class="section__title">
                             <span>Более 300 бизнес</span> - событий в год
@@ -1210,7 +1210,12 @@
                             Где ты сможешь найти людей близких по духу и сформировать свое окружение
                         </div>
                     </div>
-                    <div class="section__header-right">
+                    <div class="section__header-right events__header-right">
+                        <button class="btn events__view-button events__filter-toggle">
+                            <svg viewBox="0 0 16 16" width="16" height="16">
+                                <use href="/img/icons/sprite.svg#filter"></use>
+                            </svg>
+                        </button>
                         <div class="events__view">
                             <button class="btn events__view-button events__view-button--active" data-type="horizontal">
                                 <svg viewBox="0 0 16 16" width="16" height="16">
@@ -1240,6 +1245,14 @@
                 <div class="events__inner">
                     <div class="events__filter">
                         <form action="#" class="form events__filter-form">
+                            <div class="events__filter-form-header show-sm-flex">
+                                <div class="events__filter-form-title">
+                                    Фильтр
+                                </div>
+                                <button type="button" class="btn events__filter-form-close">
+                                    Отмена
+                                </button>
+                            </div>
                             <div class="events__filter-item">
                                 <div class="events__filter-title">
                                     Тема
@@ -1290,6 +1303,14 @@
                                         Закрытое мероприятие
                                     </span>
                                 </label>
+                            </div>
+                            <div class="events__filter-form-buttons show-sm-flex">
+                                <button type="reset" class="btn terra-btn terra-btn--gray events__filter-form-button">
+                                    Сбросить
+                                </button>
+                                <button type="submit" class="btn terra-btn terra-btn--blue events__filter-form-button">
+                                    Применить
+                                </button>
                             </div>
                         </form>
                         <a href="#" class="terra-btn terra-btn--blue terra-btn--58 events__link">
