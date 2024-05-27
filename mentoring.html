@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менторинг</title>
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header id="header" class="header header--absolute">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__top">
+                <a href="index.html" class="logo header__logo">
+                    <img class="logo__img header__logo-img" src="img/logo.png" alt="">
+                </a>
+                <div class="header__location">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <a href="mailto:help@terra.com" class="header__email header__contact">
+                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                            </svg>
+                            help@terra.com
+                        </a>
+                        <span class="header__email header__contact">
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                            </svg>
+                            Москва, ул. Большая Андроньевская д. 17А
+                        </span>
+                    </div>
+                    <a href="#" class="header__telegram terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#" class="header__join terra-btn terra-btn--blue">
+                    Вступить
+                </a>
+                <button id="nav-toggle" class="btn header__nav-toggle">
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                </button>
+            </div>
+            <div id="header-mobile" class="header__bottom">
+                <nav class="nav header__nav">
+                    <ul class="nav__list header__nav-list">
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="about.html">
+                                О клубе
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Наставничество
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Школы и курсы
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Проекты
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Кейсы
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Календарь
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Спонсорам
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__contacts header__contacts--mobile show-md">
+                    <a href="mailto:help@terra.com" class="header__email header__contact">
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                        </svg>
+                        help@terra.com
+                    </a>
+                    <span class="header__address header__contact">
+                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва, ул. Большая Андроньевская д. 17А
+                    </span>
+                </div>
+                <div class="header__location header__location--mobile show-md">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="social header__social show-md">
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--telegram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--vk header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--youtube header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--instagram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--tiktok header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--googleplay header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1659)">
+                                  <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                  <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                  <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                  <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1659">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--appstore header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1656)">
+                                  <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1656">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="content" id="content">
+        <section class="section intro mentoring">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__info">
+                        <h1 class="intro__title">
+                            <span>Найти наставника</span> - самый короткий путь к успеху
+                        </h1>
+                        <blockquote class="quote mentoring__quote">
+                            <span class="quote__icon">“</span>
+                            <div class="quote__text">
+                                Каждому нужен наставник. Неважно, кто вы - баскетболист, теннисист, гимнаст или игрок в бридж.
+                            </div>
+                            <span class="quote__author">
+                                Билл Гейтс
+                            </span>
+                        </blockquote>
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mentoring__link xs-stretch">
+                            Найти своего наставника
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="intro__right">
+                        <div class="swiper intro__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide intro__slide swiper-slide-active">
+                                    <img src="img/intro-slide-1.jpg" alt="" class="intro__slide-img">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-wrap section-wrap--bg-circle section--gray section--radius">
+            <span class="decoration decoration--circle decoration--circle-big hide-md"></span>
+            <span class="decoration decoration--circle decoration--circle-small hide-md"></span>
+            <span class="decoration decoration--gradient hide-md"></span>
+            <div class="section-wrap__inner">
+                <section class="section section-gap faq">
+                    <div class="container">
+                        <div class="section__half faq__inner">
+                            <div class="section__header faq__header mb0">
+                                <h2 class="section__title faq__title">
+                                    Часто задаваемые вопросы
+                                </h2>
+                            </div>
+                            <div class="faq__items">
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Каким должен быть идеальный Отдел Продаж?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Как будет идти обучение?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Можно ли научиться управлять отделом продаж за 4 месяца?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        С чего начать? 
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Как будет идти обучение?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Можно ли научиться управлять отделом продаж за 4 месяца?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        С чего начать? 
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-gap-top join">
+                    <div class="container">
+                        <div class="join__inner">
+                            <div class="join__info">
+                                <div class="section__header-heading">
+                                    <h2 class="section__title">
+                                        Присоединяйтесь <span>к нашему клубу!</span>
+                                    </h2>
+                                </div>
+                                <blockquote class="quote join__quote">
+                                    <div class="quote__text">
+                                        Никогда не забывай этой истины: то, что ты получаешь от жизни — это то, что ты жизни даешь.
+                                    </div>
+                                    <span class="quote__author">
+                                        Ошо
+                                    </span>
+                                </blockquote>
+                                <a href="#" class="terra-btn terra-btn--blue terra-btn--58 join__link xs-stretch">
+                                    Присоединиться к клубу
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <img src="img/join.png" alt="" class="join__img hide-md">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="navigation">
+    <div class="container">
+        <div class="navigation__inner">
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Школы по направлениям
+                </div>
+                <ul class="navigation__list navigation__list--two-col">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Программирование</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Дизайн</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Аналитика</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетинг</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Управление</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Финансы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кино и музыка</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетплейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Инженерия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Психология</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Здоровье</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Английский язык</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Все школы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Клуб Терра
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">О клубе</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мероприятия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Спонсорам</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Блог</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Наставничество
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Наставники</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Старт</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Запуск</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Прорыв</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Опора</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Стать наставником</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Проекты
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Благотворительность</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Точка Биффуркации</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастер-классы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастермайнды</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Поединки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <a href="#" class="logo footer__logo">
+                    <img class="logo__img footer__logo-img" src="img/logo-white.png">
+                </a>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__item footer__item--description">
+                    <div class="footer__description">
+                        <p>
+                            Терра&nbsp;&mdash; это некоммерческий клуб предпринимателей, объединённых идеей достичь всеобщего благополучия.
+                        </p>
+                        <p>
+                            Глобальная миссией Терры&nbsp;&mdash; борьба с&nbsp;бедностью и&nbsp;нереализованностью людей через обучение людей построению бизнеса.
+                        </p>
+                    </div>
+                    <ul class="social footer__social">
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--telegram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--vk footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--youtube footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--instagram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--tiktok footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#tiktok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item footer__item--contacts">
+                    <div class="footer__contacts">
+                        <a class="footer__contact footer__contact--email" href="mailto:info@club-terra.ru">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#envelope"></use>
+                            </svg>
+                            info@club-terra.ru
+                        </a>
+                        <div class="footer__contact footer__contact--address">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#map-pin"></use>
+                            </svg>
+                            115487, Россия, Москва, <br> Пресненская наб. 12 Башня "Федерация"
+                        </div>
+                    </div>
+                    <div class="footer__apps">
+                        <div class="footer__app">
+                            <a class="footer__app-item footer__app-item--appstore" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1656)">
+                                      <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1656">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>    
+                            </a>
+                            <a class="footer__app-item footer__app-item--googleplay" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1659)">
+                                      <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                      <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                      <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                      <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1659">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#" class="footer__app-link" target="_blank" rel="noopener noreferrer">
+                            Скачать приложение Терры
+                        </a>
+                    </div>
+                    <a href="#" class="footer__bot-link terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__item footer__item--subscribe">
+                    <div class="footer__subscribe">
+                        <div class="footer__subscribe-title">
+                            Введите ваш email, чтобы всегда быть в курсе последних обновлений
+                        </div>
+                        <form class="footer__subscribe-form">
+                            <input type="email" name="email" required placeholder="E-mail" class="footer__subscribe-field">
+                            <button class="btn terra-btn terra-btn--blue footer__subscribe-submit">
+                                Подписаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="footer__copyright-text">
+                    © 2022 “TERRA – Некоммерческий клуб предпринимателей”
+                </div>
+                <a href="#" class="footer__copyright-link">
+                    ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="location" class="modal location">
+    <div class="modal__inner location__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <h2 class="modal__title location__title">
+            Выберите город
+        </h2>
+        <div class="location__content">
+            <input class="search-input location__search" type="text" data-list=".location__list" placeholder="Поиск">
+            <ul class="location__list">
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link location__list-link--current">
+                        Москва
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Санкт-Петербург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новосибирск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Екатеринбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Казань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Нижний Новгород
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Челябинск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Самара
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Омск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ростов-на-Дону
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Уфа
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Красноярск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Воронеж
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пермь
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Волгоград
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Краснодар
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тюмень
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ижевск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Барнаул
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ульяновск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иркутск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Хабаровск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ярославль
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Владивосток
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Махачкала
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Томск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Оренбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Кемерово
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новокузнецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Рязань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Астрахань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пенза
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Липецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тула
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Киров
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Чебоксары
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Курск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Брянск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иваново
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Магнитогорск
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.umd.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
