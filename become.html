@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стать наставником</title>
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header id="header" class="header header--absolute">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__top">
+                <a href="index.html" class="logo header__logo">
+                    <img class="logo__img header__logo-img" src="img/logo.png" alt="">
+                </a>
+                <div class="header__location">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <a href="mailto:help@terra.com" class="header__email header__contact">
+                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                            </svg>
+                            help@terra.com
+                        </a>
+                        <span class="header__email header__contact">
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                            </svg>
+                            Москва, ул. Большая Андроньевская д. 17А
+                        </span>
+                    </div>
+                    <a href="#" class="header__telegram terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#" class="header__join terra-btn terra-btn--blue">
+                    Вступить
+                </a>
+                <button id="nav-toggle" class="btn header__nav-toggle">
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                </button>
+            </div>
+            <div id="header-mobile" class="header__bottom">
+                <nav class="nav header__nav">
+                    <ul class="nav__list header__nav-list">
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="about.html">
+                                О клубе
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Наставничество
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Школы и курсы
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Проекты
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Кейсы
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Календарь
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Спонсорам
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__contacts header__contacts--mobile show-md">
+                    <a href="mailto:help@terra.com" class="header__email header__contact">
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                        </svg>
+                        help@terra.com
+                    </a>
+                    <span class="header__address header__contact">
+                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва, ул. Большая Андроньевская д. 17А
+                    </span>
+                </div>
+                <div class="header__location header__location--mobile show-md">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="social header__social show-md">
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--telegram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--vk header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--youtube header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--instagram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--tiktok header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--googleplay header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1659)">
+                                  <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                  <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                  <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                  <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1659">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--appstore header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1656)">
+                                  <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1656">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="content" id="content">
+        <section class="section intro intro-slider auto-height mentoring">
+            <div class="intro__inner container mentoring__inner">
+                <div class="intro__info">
+                    <h1 class="intro__title">
+                        Быстрее всего в клубе растут <span>сами наставники</span>
+                    </h1>
+                    <blockquote class="quote mentoring__quote">
+                        <span class="quote__icon">“</span>
+                        <div class="quote__text">
+                            Никогда не забывай этой истины: то, что ты получаешь от жизни, - это то, что ты жизни даешь
+                        </div>
+                        <span class="quote__author">
+                            Ошо
+                        </span>
+                    </blockquote>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mentoring__link xs-stretch">
+                        Стать наставником
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="intro__right container">
+                    <div class="swiper intro__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Александр Ларкин
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro-2.jpg" alt="" class="intro__card-img">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Георгий Алек
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Александр Ларкин
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap section--radius steps">
+            <div class="container">
+                <div class="section__header">
+                    <svg class="section__header-line" width="315" height="122" viewBox="0 0 315 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2279L4.65857 65.6583L64.8273 60.0026L25.1367 73.0364L47.9013 111.926L116.921 103.327L122.36 121.885L288.826 97.2238L293.479 64.9974L314.91 60.3714L301.643 13.2794L246.094 15.116L239.502 0L0 14.2279Z" fill="#E1F8FF"></path>
+                    </svg>
+                    <h2 class="section__title">
+                        Как стать <span class="skyblue">наставником?</span>
+                    </h2>
+                </div>
+                <div class="steps__cards">
+                    <div class="step-card steps__card">
+                        <div class="step-card__header steps__card-header">
+                            <span class="step-card__icon steps__card-icon" style="background-image: url(img/step-1.svg);"></span>
+                            <div class="step-card__title steps__card-title">
+                                Подать заявку
+                            </div>
+                        </div>
+                        <div class="step-card__content">
+                            <div class="step-card__description">
+                                Оставить заявку может каждый - просто нажмите на кнопку ниже ;)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card steps__card" style="--card-color: #CDDEFF;">
+                        <div class="step-card__header steps__card-header">
+                            <span class="step-card__icon steps__card-icon" style="background-image: url(img/step-2.svg);"></span>
+                            <div class="step-card__title steps__card-title">
+                                Пройти собеседование с&nbsp;куратором
+                            </div>
+                        </div>
+                        <div class="step-card__content">
+                            <div class="step-card__description">
+                                На собеседовании куратор задаст несколько вопросов по поводу вашего опыта
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card steps__card" style="--card-color: #BBF7D0;">
+                        <div class="step-card__header steps__card-header">
+                            <span class="step-card__icon steps__card-icon" style="background-image: url(img/step-3.svg);"></span>
+                            <div class="step-card__title steps__card-title">
+                                Пройти подтверждение дохода и&nbsp;СБ
+                            </div>
+                        </div>
+                        <div class="step-card__content">
+                            <div class="step-card__description">
+                                Наша система безопастности проверит Ваши данные
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card steps__card" style="--card-color: #9181FF; --text-color: #fff;">
+                        <div class="step-card__header steps__card-header">
+                            <span class="step-card__icon steps__card-icon" style="background-image: url(img/step-4.svg);"></span>
+                            <div class="step-card__title steps__card-title">
+                                Подписать соглашение
+                            </div>
+                        </div>
+                        <div class="step-card__content">
+                            <div class="step-card__description">
+                                Оставить заявку может каждый - просто нажмите на кнопку ниже ;)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card steps__card" style="--card-color: #0075FF; --text-color: #fff;">
+                        <div class="step-card__header steps__card-header">
+                            <span class="step-card__icon steps__card-icon" style="background-image: url(img/step-5.svg);"></span>
+                            <div class="step-card__title steps__card-title">
+                                Прийти на&nbsp;запуск потока
+                            </div>
+                        </div>
+                        <div class="step-card__content">
+                            <div class="step-card__description">
+                                Наша система безопастности проверит Ваши данные
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="terra-btn terra-btn--blue terra-btn--58 terra-btn--334 steps__link hide-sm">
+                    Стать наставником
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section class="section section-gap-bottom ecosystem">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">
+                        <span>Всего 5 уровней</span> обучения
+                    </h2>
+                    <div class="section__description">
+                        Большинство наставников уровня “Опоры” и “Мастер” сами выросли в Терре, построив миллиардные компании
+                    </div>
+                </div>
+            </div>
+            <div class="container ecosystem__slider-container">
+                <div class="swiper ecosystem__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ecosystem__slide">
+                            <div class="course-card ecosystem__card" style="background-image: url('img/ecosystem-1.png');">
+                                <div class="course-card__inner">
+                                    <div class="course-card__header">
+                                        <div class="course-card__title">
+                                            Старт
+                                        </div>
+                                    </div>
+                                    <div class="course-card__description">
+                                        <p>
+                                            Для тех, кто хочет уйти из найма и открыть свой бизнес
+                                        </p>
+                                        <p>
+                                            Ваш доход в бизнесе до 50 тыс.
+                                        </p>
+                                        <p>
+                                            Доход наставника 200 - 500 тыс.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="course-card__link">
+                                        <span>Выбрать наставника</span>
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 1V17M17.5 9L1.5 9" stroke="#202229" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ecosystem__slide">
+                            <div class="course-card ecosystem__card course-card--green" style="background-image: url('img/ecosystem-2.png');">
+                                <div class="course-card__inner">
+                                    <div class="course-card__header">
+                                        <div class="course-card__title">
+                                            Запуск
+                                        </div>
+                                    </div>
+                                    <div class="course-card__description">
+                                        <p>
+                                            Выберем нишу / Прокачаем маркетинг и продажи / Выйдем на стабильный доход 300+
+                                        </p>
+                                        <p>
+                                            Ваш доход в бизнесе 50 - 500 тыс.
+                                        </p>
+                                        <p>
+                                            Доход наставника 500 тыс. - 1.5 млн.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="course-card__link">
+                                        <span>Выбрать наставника</span>
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 1V17M17.5 9L1.5 9" stroke="#202229" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ecosystem__slide">
+                            <div class="course-card ecosystem__card course-card--blue" style="background-image: url('img/ecosystem-3.png');">
+                                <div class="course-card__inner">
+                                    <div class="course-card__header">
+                                        <div class="course-card__title">
+                                            Прорыв
+                                        </div>
+                                    </div>
+                                    <div class="course-card__description">
+                                        <p>
+                                            Маштабируем бизнес от лавки до миллиона
+                                        </p>
+                                        <p>
+                                            Ваш доход в бизнесе 500 тыс. - 1.5 млн.
+                                        </p>
+                                        <p>
+                                            Доход наставника 1.5 млн. - 5 млн.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="course-card__link">
+                                        <span>Выбрать наставника</span>
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 1V17M17.5 9L1.5 9" stroke="#202229" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ecosystem__slide">
+                            <div class="course-card ecosystem__card course-card--black" style="background-image: url('img/ecosystem-4.png');">
+                                <div class="course-card__inner">
+                                    <div class="course-card__header">
+                                        <div class="course-card__title">
+                                            Опора
+                                        </div>
+                                    </div>
+                                    <div class="course-card__description">
+                                        <p>
+                                            Выстроим систему в бизнесе и сильную команду управления
+                                        </p>
+                                        <p>
+                                            Ваш доход в бизнесе от 1.5 млн.
+                                        </p>
+                                        <p>
+                                            Доход наставника от 5 млн.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="course-card__link">
+                                        <span>Выбрать наставника</span>
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 1V17M17.5 9L1.5 9" stroke="#202229" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ecosystem__slide">
+                            <div class="course-card ecosystem__card course-card--blue-dark" style="background-image: url('img/ecosystem-5.png');">
+                                <div class="course-card__inner">
+                                    <div class="course-card__header">
+                                        <div class="course-card__title">
+                                            Мастер
+                                        </div>
+                                    </div>
+                                    <div class="course-card__description">
+                                        <p>
+                                            Построим великую компанию и оставим след в истории
+                                        </p>
+                                        <p>
+                                            Ваш доход в бизнесе от 5 млн.
+                                        </p>
+                                        <p>
+                                            Доход наставника от 10 млн.
+                                        </p>
+                                        <div class="course-card__recommendation">
+                                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6673 7.50016C13.6673 11.1821 10.6825 14.1668 7.00065 14.1668C3.31875 14.1668 0.333984 11.1821 0.333984 7.50016C0.333984 3.81826 3.31875 0.833496 7.00065 0.833496C10.6825 0.833496 13.6673 3.81826 13.6673 7.50016ZM7.00065 4.66683C6.54041 4.66683 6.16732 5.03993 6.16732 5.50016C6.16732 5.7763 5.94346 6.00016 5.66732 6.00016C5.39117 6.00016 5.16732 5.7763 5.16732 5.50016C5.16732 4.48764 5.98813 3.66683 7.00065 3.66683C8.01317 3.66683 8.83398 4.48764 8.83398 5.50016C8.83398 5.86439 8.72725 6.20521 8.5432 6.49125C8.42791 6.67041 8.29313 6.84146 8.16885 6.99592L8.10182 7.079C7.9987 7.20663 7.90404 7.32379 7.81657 7.44401C7.60084 7.74049 7.50065 7.96329 7.50065 8.16683V8.50016C7.50065 8.7763 7.27679 9.00016 7.00065 9.00016C6.72451 9.00016 6.50065 8.7763 6.50065 8.50016V8.16683C6.50065 7.63399 6.76226 7.19334 7.00796 6.85566C7.11178 6.71298 7.22554 6.57225 7.32899 6.44429L7.38974 6.36902C7.51321 6.21558 7.6183 6.0806 7.70225 5.95013C7.78559 5.82062 7.83398 5.66681 7.83398 5.50016C7.83398 5.03993 7.46089 4.66683 7.00065 4.66683ZM7.50065 10.1668C7.50065 9.89069 7.27679 9.66683 7.00065 9.66683C6.72451 9.66683 6.50065 9.89069 6.50065 10.1668V10.8335C6.50065 11.1096 6.72451 11.3335 7.00065 11.3335C7.27679 11.3335 7.50065 11.1096 7.50065 10.8335V10.1668Z" fill="white" />
+                                            </svg>
+                                            Только по рекомендации
+                                        </div>
+                                    </div>
+                                    <a href="#" class="course-card__link">
+                                        <span>Выбрать наставника</span>
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 1V17M17.5 9L1.5 9" stroke="#202229" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap mentoring-features">
+            <div class="container">
+                <div class="mentoring-features__inner">
+                    <div class="mentoring-features__info">
+                        <div class="section__header">
+                            <h2 class="section__title">
+                                Быстрее всего в клубе <span>растут сами наставники</span>
+                            </h2>
+                        </div>
+                        <div class="mentoring-features__cards">
+                            <div class="feature mentoring-features__card">
+                                <i class="feature__icon" aria-hidden="true" style="background-image: url(img/intro-feature-1.svg);"></i>
+                                <div class="feature__title">
+                                    Бесплатно для всех
+                                </div>
+                                <div class="feature__description">
+                                    в нашем сообществе запрещено что-либо продавать
+                                </div>
+                            </div>
+                            <div class="feature mentoring-features__card">
+                                <i class="feature__icon" aria-hidden="true" style="background-image: url(img/intro-feature-2.svg);"></i>
+                                <div class="feature__title">
+                                    Наставники практики
+                                </div>
+                                <div class="feature__description">
+                                    Каждый наставник и спикер ведет свой бизнес и помогает другим
+                                </div>
+                            </div>
+                            <div class="feature mentoring-features__card">
+                                <i class="feature__icon" aria-hidden="true" style="background-image: url(img/intro-feature-3.svg);"></i>
+                                <div class="feature__title">
+                                    Некомерческое сообщество
+                                </div>
+                                <div class="feature__description">
+                                    Терра - это благотворительный проект
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mentoring-features__link xs-stretch">
+                            Стать наставником
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mentoring-features__thumb">
+                        <img src="img/mentoring-features.jpg" alt="" class="mentoring-features__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap terra-today">
+            <div class="container">
+                <div class="section__half terra-today__inner">
+                    <div class="section__header terra-today__header mb0">
+                        <svg class="section__header-line" width="315" height="122" viewBox="0 0 315 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2279L4.65857 65.6583L64.8273 60.0026L25.1367 73.0364L47.9013 111.926L116.921 103.327L122.36 121.885L288.826 97.2238L293.479 64.9974L314.91 60.3714L301.643 13.2794L246.094 15.116L239.502 0L0 14.2279Z" fill="#E1F8FF"></path>
+                        </svg>
+                        <h2 class="section__title terra-today__title">
+                            <span>Терра</span> сегодня
+                        </h2>
+                        <div class="section__description terra-today__description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        </div>
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--blue-outline terra-btn--58 section__join terra-today__join">
+                            Присоединиться
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="terra-today__grid">
+                        <div class="terra-today__item terra-today__item--stretch">
+                            <span class="terra-today__item-number">
+                                45000+
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Участников
+                            </span>
+                        </div>
+                        <div class="terra-today__item">
+                            <span class="terra-today__item-number">
+                                50+
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Бизнес-школ
+                            </span>
+                        </div>
+                        <div class="terra-today__item">
+                            <span class="terra-today__item-number">
+                                20+
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Онлайн-курсов
+                            </span>
+                        </div>
+                        <div class="terra-today__item terra-today__item--rowspan">
+                            <span class="terra-today__item-number">
+                                4
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Благотворительных  проекта
+                            </span>
+                        </div>
+                        <div class="terra-today__item terra-today__item--stretch">
+                            <span class="terra-today__item-number">
+                                400+
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Наставников
+                            </span>
+                        </div>
+                        <div class="terra-today__item">
+                            <span class="terra-today__item-number">
+                                6
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Стран
+                            </span>
+                        </div>
+                        <div class="terra-today__item">
+                            <span class="terra-today__item-number">
+                                26
+                            </span>
+                            <span class="terra-today__item-desc">
+                                Городов
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--blue-outline terra-btn--58 section__join terra-today__join terra-today__join-mobile">
+                        Присоединиться
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section-gap-bottom results">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">
+                        <span>Результаты</span> учеников
+                    </h2>
+                    <div class="section__description">
+                        За время существования клуба
+                    </div>
+                </div>
+                <div class="results__inner">
+                    <div class="result results__card">
+                        <svg width="260" height="211" viewBox="0 0 260 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="309" cy="10" r="99" stroke="#AAEFC2" stroke-width="80"></circle>
+                            <circle cx="32.5" cy="225.5" r="118.5" stroke="#AAEFC2" stroke-width="80"></circle>
+                        </svg>
+                        <div class="result__inner">
+                            <span class="result__number">
+                                3
+                            </span>
+                            <div class="result__title">
+                                бизнеса
+                            </div>
+                            <div class="result__descr">
+                                с оборотом свыше 1 млрд. долларов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result result--blue-sky results__card">
+                        <svg width="260" height="211" viewBox="0 0 260 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37.4706" cy="20.4706" r="91.4706" stroke="#A0F3FF" stroke-width="80"></circle>
+                            <circle cx="260.471" cy="280.471" r="91.4706" stroke="#A0F3FF" stroke-width="80"></circle>
+                        </svg>
+                        <div class="result__inner">
+                            <span class="result__number">
+                                100+
+                            </span>
+                            <div class="result__title">
+                                компаний
+                            </div>
+                            <div class="result__descr">
+                                с оборотом от
+                                1 млрд. рублей
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result result--blue results__card">
+                        <svg width="260" height="211" viewBox="0 0 260 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="247" cy="6" r="121" stroke="#BED1F7" stroke-width="80"></circle>
+                            <circle cx="-4.5" cy="310.5" r="118.5" stroke="#BED1F7" stroke-width="80"></circle>
+                          </svg>
+                        <div class="result__inner">
+                            <span class="result__number">
+                                30k
+                            </span>
+                            <div class="result__title">
+                                рабочих мест
+                            </div>
+                            <div class="result__descr">
+                                с оборотом от
+                                создано участниками Терры
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result result--orange results__card">
+                        <svg width="260" height="211" viewBox="0 0 260 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="-18" cy="6" r="121" stroke="#FAD9C7" stroke-width="80"></circle>
+                            <circle cx="271.5" cy="201.5" r="78.5" stroke="#FAD9C7" stroke-width="80"></circle>
+                        </svg>
+                        <div class="result__inner">
+                            <span class="result__number">
+                                6k
+                            </span>
+                            <div class="result__title">
+                                бизнесов
+                            </div>
+                            <div class="result__descr">
+                                открыто предпринимателями с&nbsp;нуля
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result result--red results__card">
+                        <svg width="260" height="211" viewBox="0 0 260 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="-6" cy="198" r="74" stroke="#FACDC5" stroke-width="80"></circle>
+                            <circle cx="274.5" cy="-14.5" r="115.5" stroke="#FACDC5" stroke-width="80"></circle>
+                        </svg>
+                        <div class="result__inner">
+                            <span class="result__number">
+                                20k+
+                            </span>
+                            <div class="result__title">
+                                учеников
+                            </div>
+                            <div class="result__descr">
+                                сделали прорыв в&nbsp; бизнесе х2&nbsp;и&nbsp;выше
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results__footer">
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58 terra-btn--334 results__link xs-stretch">
+                        Стать наставником
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="section-wrap section-wrap--bg-circle section--gray section--radius">
+            <span class="decoration decoration--circle decoration--circle-big hide-md"></span>
+            <span class="decoration decoration--circle decoration--circle-small hide-md"></span>
+            <span class="decoration decoration--gradient hide-md"></span>
+            <div class="section-wrap__inner">
+                <section class="section section-gap faq">
+                    <div class="container">
+                        <div class="section__half faq__inner">
+                            <div class="section__header faq__header mb0">
+                                <h2 class="section__title faq__title">
+                                    Часто задаваемые вопросы
+                                </h2>
+                            </div>
+                            <div class="faq__items">
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Каким должен быть идеальный Отдел Продаж?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Как будет идти обучение?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Можно ли научиться управлять отделом продаж за 4 месяца?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        С чего начать? 
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Как будет идти обучение?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        Можно ли научиться управлять отделом продаж за 4 месяца?
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq__item">
+                                    <button class="btn faq__item-title faq__item-toggle">
+                                        С чего начать? 
+                                        <i class="faq__item-icon"></i>
+                                    </button>
+                                    <div class="faq__item-content">
+                                        <p>
+                                            Системным. Организация отдела невозможна без прописанных структуры, регламентов работы, скриптов и инструкций. И всё это должно опираться на работающую внятную методологию.
+                                        </p>
+                                        <p>
+                                            Каждый элемент системы должен отвечать на вопрос «чтобы что?», функционировать вне зависимости от того, другие  его используют. И конечно же проходить системный аудит и улучшение.
+                                        </p>
+                                        <p>
+                                            Эффективным. Главная цель ваших менеджеров — увеличение продаж каждый месяц. Если вы не генерируете прибыль, — даже если работаете в ноль — вы теряете деньги и постепенно скрываетесь из бизнеса в закат.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="section section-gap reviews">
+            <div class="container">
+                <div class="section__header section__header--half">
+                    <div class="section__header-heading">
+                        <h2 class="section__title">
+                            <span>Отзывы</span> наставников
+                        </h2>
+                    </div>
+                    <div class="section__header-right">
+                        <div class="slider-nav reviews__nav">
+                            <button class="btn slider-nav__button slider-nav__button--prev reviews__nav-button reviews__nav-button--prev">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <button class="btn slider-nav__button slider-nav__button--next reviews__nav-button reviews__nav-button--next">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__inner">
+                <div class="container">
+                    <div class="swiper reviews__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide reviews__slide">
+                                <div class="review-card reviews__card">
+                                    <div class="review-card__thumb">
+                                        <img src="img/review-1.jpg" alt="" class="review-card__img">
+                                    </div>
+                                    <div class="review-card__info">
+                                        <h4 class="review-card__title">
+                                            Иван Иванов
+                                        </h4>
+                                        <span class="review-card__position">
+                                            Наставник с 2020 года
+                                        </span>
+                                        <div class="review-card__description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. In mi aliquam vel ultricies sociis morbi ac. Non tincidunt ut tortor in elementum bibendum eget. Venenatis vitae quam non euismod turpis purus dui tincidunt aliquam. Sed tempus amet sed tortor.
+                                            </p>
+                                            <p>
+                                                Et malesuada ultrices eget libero egestas malesuada ut. Morbi quis eget sapien pellentesque pharetra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide reviews__slide">
+                                <div class="review-card reviews__card">
+                                    <div class="review-card__thumb">
+                                        <img src="img/review-1.jpg" alt="" class="review-card__img">
+                                    </div>
+                                    <div class="review-card__info">
+                                        <h4 class="review-card__title">
+                                            Иван Иванов
+                                        </h4>
+                                        <span class="review-card__position">
+                                            Наставник с 2020 года
+                                        </span>
+                                        <div class="review-card__description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. In mi aliquam vel ultricies sociis morbi ac. Non tincidunt ut tortor in elementum bibendum eget. Venenatis vitae quam non euismod turpis purus dui tincidunt aliquam. Sed tempus amet sed tortor.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide reviews__slide">
+                                <div class="review-card reviews__card">
+                                    <div class="review-card__thumb">
+                                        <img src="img/review-1.jpg" alt="" class="review-card__img">
+                                    </div>
+                                    <div class="review-card__info">
+                                        <h4 class="review-card__title">
+                                            Иван Иванов
+                                        </h4>
+                                        <span class="review-card__position">
+                                            Наставник с 2020 года
+                                        </span>
+                                        <div class="review-card__description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. In mi aliquam vel ultricies sociis morbi ac. Non tincidunt ut tortor in elementum bibendum eget. Venenatis vitae quam non euismod turpis purus dui tincidunt aliquam. Sed tempus amet sed tortor.
+                                            </p>
+                                            <p>
+                                                Et malesuada ultrices eget libero egestas malesuada ut. Morbi quis eget sapien pellentesque pharetra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide reviews__slide">
+                                <div class="review-card reviews__card">
+                                    <div class="review-card__thumb">
+                                        <img src="img/review-1.jpg" alt="" class="review-card__img">
+                                    </div>
+                                    <div class="review-card__info">
+                                        <h4 class="review-card__title">
+                                            Иван Иванов
+                                        </h4>
+                                        <span class="review-card__position">
+                                            Наставник с 2020 года
+                                        </span>
+                                        <div class="review-card__description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur. In mi aliquam vel ultricies sociis morbi ac. Non tincidunt ut tortor in elementum bibendum eget. Venenatis vitae quam non euismod turpis purus dui tincidunt aliquam. Sed tempus amet sed tortor.
+                                            </p>
+                                            <p>
+                                                Et malesuada ultrices eget libero egestas malesuada ut. Morbi quis eget sapien pellentesque pharetra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap stories">
+            <div class="container">
+                <div class="section__header section__header--half">
+                    <div class="section__header-heading">
+                        <h2 class="section__title">
+                            Истории <span>успеха</span>
+                        </h2>
+                    </div>
+                    <div class="section__header-right hide-sm">
+                        <a href="#" class="stories__youtube" target="_blank">
+                            <svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7379 0.642501C28.0229 0.988464 29.0361 2.00164 29.3821 3.28664C30.0246 5.63424 29.9999 10.5271 29.9999 10.5271C29.9999 10.5271 29.9999 15.3953 29.3821 17.7429C29.0361 19.0279 28.0229 20.0411 26.7379 20.3871C24.3903 21.0049 14.9999 21.0049 14.9999 21.0049C14.9999 21.0049 5.63424 21.0049 3.26193 20.3624C1.97693 20.0164 0.963752 19.0032 0.61779 17.7182C0 15.3953 0 10.5024 0 10.5024C0 10.5024 0 5.63424 0.61779 3.28664C0.963752 2.00164 2.00164 0.963752 3.26193 0.61779C5.60953 0 14.9999 0 14.9999 0C14.9999 0 24.3903 0 26.7379 0.642501ZM19.8187 10.5025L12.0098 15V6.00494L19.8187 10.5025Z" fill="#FF0000"></path>
+                            </svg>
+                            Мы YouTube 
+                        </a>
+                        <a href="#" class="terra-btn terra-btn--outline terra-btn--52">
+                            Все материалы
+                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </a>
+                        <div class="slider-nav stories__nav">
+                            <button class="btn slider-nav__button slider-nav__button--prev stories__nav-button stories__nav-button--prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-9579306e4d81084ac" aria-disabled="true">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <button class="btn slider-nav__button slider-nav__button--next stories__nav-button stories__nav-button--next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9579306e4d81084ac" aria-disabled="false">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container stories__inner">
+                <div class="swiper stories__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card case-card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 236
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-1.jpg" alt="" class="case-card__img">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Заработал через энергию внутри себя
+                                        </div>
+                                        <div class="case-card__description">
+                                            Благодаря помощи наставника
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 237
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-2.jpg" alt="" class="case-card__img">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Трансформация, состояние, вера в себя и окружение
+                                        </div>
+                                        <div class="case-card__description">
+                                            помогло мне вырасти в доходе до 600000 т.р в месяц
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 238
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-3.jpg" alt="" class="case-card__img">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Я поверил, что мне можно все
+                                        </div>
+                                        <div class="case-card__description">
+                                            и закрыл 2 сделки на 500 000 рублей
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 239
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Все думали, что я фрик. А я сделала х3 на вокале!
+                                        </div>
+                                        <div class="case-card__description">
+                                            За два месяца с 70000 до 470000 руб!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 239
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Все думали, что я фрик. А я сделала х3 на вокале!
+                                        </div>
+                                        <div class="case-card__description">
+                                            За два месяца с 70000 до 470000 руб!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section__header-right section__footer show-sm-flex">
+                    <a href="#" class="terra-btn stories__more terra-btn--outline terra-btn--52">
+                        Все материалы
+                        <svg viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </a>
+                    <div class="slider-nav stories__nav">
+                        <button class="btn slider-nav__button slider-nav__button--prev stories__nav-button stories__nav-button--prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-9579306e4d81084ac" aria-disabled="true">
+                            <svg viewBox="0 0 11 23" width="11" height="23">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </button>
+                        <button class="btn slider-nav__button slider-nav__button--next stories__nav-button stories__nav-button--next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9579306e4d81084ac" aria-disabled="false">
+                            <svg viewBox="0 0 11 23" width="11" height="23">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap cases">
+            <div class="container">
+                <div class="cases__inner">
+                    <div class="cases__blocks">
+                        <div class="cases__heading">
+                            <div class="section__header">
+                                <svg class="section__header-line" width="315" height="122" viewBox="0 0 315 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2279L4.65857 65.6583L64.8273 60.0026L25.1367 73.0364L47.9013 111.926L116.921 103.327L122.36 121.885L288.826 97.2238L293.479 64.9974L314.91 60.3714L301.643 13.2794L246.094 15.116L239.502 0L0 14.2279Z" fill="#E1F8FF"></path>
+                                </svg>
+                                <h2 class="section__title">
+                                    <span>Ближайшие мероприятия</span> наставничества
+                                </h2>
+                                <div class="section__description">
+                                    Старт нового потока обучения каждые 2 месяца
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card--has-tags card--white cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #81A4FF;">
+                            <svg stroke="#7098FF" class="card__bubble">
+                                <use href="/img/icons/sprite.svg#bubble-2"></use>
+                            </svg>
+                            <div class="card__inner">
+                                <div class="card__info">
+                                    <div class="card__info-inner">
+                                        <div class="card__info-heading">
+                                            <div class="card__title card__title--big">
+                                                Старт 31 потока <br> наставничества уровня <br> Опора +
+                                            </div>
+                                        </div>
+                                        <ul class="tags card__tags">
+                                            <li class="tags__item">
+                                                <span class="tag tag--no-hover card__tag" href="#" style="background-color: #FFEDD2;">
+                                                    Москва, ш. Энтузиастов, д.5 стр 2
+                                                </span>
+                                            </li>
+                                            <li class="tags__item">
+                                                <span class="tag tag--no-hover card__tag" href="#">
+                                                    18 апреля
+                                                </span>
+                                            </li>
+                                            <li class="tags__item">
+                                                <span class="tag tag--no-hover card__tag" href="#" style="background-color: #d2fff7;">
+                                                    в 17:00
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a href="#" class="card__link terra-btn terra-btn--white terra-btn--52">
+                                        Записаться
+                                        <svg viewBox="0 0 12 12" width="12" height="12">
+                                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cases__card" style="background-color: #BBF7D0;">
+                            <svg stroke="#B0F2C7" class="card__bubble">
+                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                            </svg>
+                            <div class="card__inner">
+                                <div class="card__info">
+                                    <div class="card__title">
+                                        Форум группы
+                                    </div>
+                                    <p class="card__subtitle">
+                                        Какой то текст
+                                    </p>
+                                    <a href="#" class="card__link terra-btn terra-btn--white terra-btn--52">
+                                        Записаться
+                                        <svg viewBox="0 0 12 12" width="12" height="12">
+                                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/case-12.png" alt="" class="card__img">
+                        </div>
+                        <div class="card cases__card" style="background-color: #FBE3FF;">
+                            <div class="card__inner">
+                                <div class="card__info">
+                                    <div class="card__title">
+                                        Школа
+                                    </div>
+                                    <div class="card__title card__title--big">
+                                        WILDBERRIES <br> Мастер
+                                    </div>
+                                    <a href="#" class="card__link terra-btn terra-btn--white terra-btn--52">
+                                        Записаться
+                                        <svg viewBox="0 0 12 12" width="12" height="12">
+                                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/case-13.png" alt="" class="card__img">
+                        </div>
+                        <div class="card cases__card" style="background-color: #F3F4F7;">
+                            <svg stroke="rgba(255, 255, 255, 0.5)" class="card__bubble">
+                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                            </svg>
+                            <div class="card__inner">
+                                <div class="card__info">
+                                    <div class="card__title">
+                                        Школа управления
+                                    </div>
+                                    <p class="card__subtitle">
+                                        от основателя <br> Шухрата Расулова
+                                    </p>
+                                    <a href="#" class="card__link terra-btn terra-btn--white terra-btn--52">
+                                        Записаться
+                                        <svg viewBox="0 0 12 12" width="12" height="12">
+                                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/case-14.png" alt="" class="card__img">
+                        </div>
+                    </div>
+                    <div class="cases__more">
+                        <a href="#" class="cases__more-link">
+                            Вступай в бот клуба и не пропусти анонсы
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <nav class="navigation">
+    <div class="container">
+        <div class="navigation__inner">
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Школы по направлениям
+                </div>
+                <ul class="navigation__list navigation__list--two-col">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Программирование</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Дизайн</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Аналитика</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетинг</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Управление</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Финансы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кино и музыка</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетплейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Инженерия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Психология</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Здоровье</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Английский язык</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Все школы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Клуб Терра
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">О клубе</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мероприятия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Спонсорам</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Блог</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Наставничество
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Наставники</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Старт</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Запуск</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Прорыв</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Опора</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Стать наставником</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Проекты
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Благотворительность</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Точка Биффуркации</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастер-классы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастермайнды</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Поединки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <a href="#" class="logo footer__logo">
+                    <img class="logo__img footer__logo-img" src="img/logo-white.png">
+                </a>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__item footer__item--description">
+                    <div class="footer__description">
+                        <p>
+                            Терра&nbsp;&mdash; это некоммерческий клуб предпринимателей, объединённых идеей достичь всеобщего благополучия.
+                        </p>
+                        <p>
+                            Глобальная миссией Терры&nbsp;&mdash; борьба с&nbsp;бедностью и&nbsp;нереализованностью людей через обучение людей построению бизнеса.
+                        </p>
+                    </div>
+                    <ul class="social footer__social">
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--telegram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--vk footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--youtube footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--instagram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--tiktok footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#tiktok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item footer__item--contacts">
+                    <div class="footer__contacts">
+                        <a class="footer__contact footer__contact--email" href="mailto:info@club-terra.ru">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#envelope"></use>
+                            </svg>
+                            info@club-terra.ru
+                        </a>
+                        <div class="footer__contact footer__contact--address">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#map-pin"></use>
+                            </svg>
+                            115487, Россия, Москва, <br> Пресненская наб. 12 Башня "Федерация"
+                        </div>
+                    </div>
+                    <div class="footer__apps">
+                        <div class="footer__app">
+                            <a class="footer__app-item footer__app-item--appstore" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1656)">
+                                      <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1656">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>    
+                            </a>
+                            <a class="footer__app-item footer__app-item--googleplay" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1659)">
+                                      <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                      <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                      <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                      <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1659">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#" class="footer__app-link" target="_blank" rel="noopener noreferrer">
+                            Скачать приложение Терры
+                        </a>
+                    </div>
+                    <a href="#" class="footer__bot-link terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__item footer__item--subscribe">
+                    <div class="footer__subscribe">
+                        <div class="footer__subscribe-title">
+                            Введите ваш email, чтобы всегда быть в курсе последних обновлений
+                        </div>
+                        <form class="footer__subscribe-form">
+                            <input type="email" name="email" required placeholder="E-mail" class="footer__subscribe-field">
+                            <button class="btn terra-btn terra-btn--blue footer__subscribe-submit">
+                                Подписаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="footer__copyright-text">
+                    © 2022 “TERRA – Некоммерческий клуб предпринимателей”
+                </div>
+                <a href="#" class="footer__copyright-link">
+                    ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="location" class="modal location">
+    <div class="modal__inner location__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <h2 class="modal__title location__title">
+            Выберите город
+        </h2>
+        <div class="location__content">
+            <input class="search-input location__search" type="text" data-list=".location__list" placeholder="Поиск">
+            <ul class="location__list">
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link location__list-link--current">
+                        Москва
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Санкт-Петербург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новосибирск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Екатеринбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Казань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Нижний Новгород
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Челябинск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Самара
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Омск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ростов-на-Дону
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Уфа
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Красноярск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Воронеж
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пермь
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Волгоград
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Краснодар
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тюмень
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ижевск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Барнаул
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ульяновск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иркутск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Хабаровск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ярославль
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Владивосток
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Махачкала
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Томск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Оренбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Кемерово
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новокузнецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Рязань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Астрахань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пенза
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Липецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тула
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Киров
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Чебоксары
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Курск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Брянск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иваново
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Магнитогорск
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.umd.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>

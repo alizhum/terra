@@ -290,7 +290,7 @@
     </div>
 </header>
     <main class="content" id="content">
-        <section class="section intro intro--inner">
+        <section class="section intro intro--inner auto-height">
             <div class="container">
                 <div class="intro__inner">
                     <div class="intro__info">
@@ -339,7 +339,7 @@
                             </svg>
                         </a>
                     </div>
-                    <img src="img/intro-2.png" alt="" class="intro__img">
+                    <img src="img/intro-2.png" alt="" class="intro__img hide-md">
                 </div>
             </div>
         </section>
@@ -965,18 +965,18 @@
                         </div>
                     </div>
                     <div class="section__header-right events__header-right">
-                        <button class="btn events__view-button events__filter-toggle">
+                        <button class="btn events__view-button events__filter-toggle filter-toggle show-sm">
                             <svg viewBox="0 0 16 16" width="16" height="16">
                                 <use href="/img/icons/sprite.svg#filter"></use>
                             </svg>
                         </button>
                         <div class="events__view">
-                            <button class="btn events__view-button events__view-button--active" data-type="horizontal">
+                            <button class="btn view-button events__view-button view-button--active" data-type="horizontal">
                                 <svg viewBox="0 0 16 16" width="16" height="16">
                                     <use href="/img/icons/sprite.svg#view-rect"></use>
                                 </svg>
                             </button>
-                            <button class="btn events__view-button" data-type="vertical">
+                            <button class="btn view-button events__view-button" data-type="vertical">
                                 <svg viewBox="0 0 16 16" width="16" height="16">
                                     <use href="/img/icons/sprite.svg#view-line"></use>
                                 </svg>
@@ -998,42 +998,42 @@
                 </div>
                 <div class="events__inner">
                     <div class="events__filter">
-                        <form action="#" class="form events__filter-form">
-                            <div class="events__filter-form-header show-sm-flex">
-                                <div class="events__filter-form-title">
+                        <form action="#" class="form filter-form events__filter-form">
+                            <div class="filter-form__header show-sm-flex">
+                                <div class="filter-form__title">
                                     Фильтр
                                 </div>
-                                <button type="button" class="btn events__filter-form-close">
+                                <button type="button" class="btn filter-form__close">
                                     Отмена
                                 </button>
                             </div>
-                            <div class="events__filter-item">
-                                <div class="events__filter-title">
+                            <div class="filter-form__item">
+                                <div class="filter-form__item-title">
                                     Тема
                                 </div>
-                                <div class="events__filter-buttons">
-                                    <button type="button" class="btn tag events__filter-button">Финансы</button>
-                                    <button type="button" class="btn tag events__filter-button">Продажи</button>
-                                    <button type="button" class="btn tag events__filter-button">Найм</button>
-                                    <button type="button" class="btn tag events__filter-button">Маркетинг</button>
-                                    <button type="button" class="btn tag events__filter-button">Кино и Музыка</button>
-                                    <button type="button" class="btn tag events__filter-button">Продажи</button>
-                                    <button type="button" class="btn tag events__filter-button">Управление</button>
-                                    <button type="button" class="btn tag events__filter-button">Управление</button>
-                                    <button type="button" class="btn tag events__filter-button">Маркетплейсы</button>
+                                <div class="filter-form__buttons">
+                                    <button type="button" class="btn tag filter-form__button">Финансы</button>
+                                    <button type="button" class="btn tag filter-form__button">Продажи</button>
+                                    <button type="button" class="btn tag filter-form__button">Найм</button>
+                                    <button type="button" class="btn tag filter-form__button">Маркетинг</button>
+                                    <button type="button" class="btn tag filter-form__button">Кино и Музыка</button>
+                                    <button type="button" class="btn tag filter-form__button">Продажи</button>
+                                    <button type="button" class="btn tag filter-form__button">Управление</button>
+                                    <button type="button" class="btn tag filter-form__button">Управление</button>
+                                    <button type="button" class="btn tag filter-form__button">Маркетплейсы</button>
                                 </div>
                             </div>
-                            <div class="events__filter-item">
-                                <div class="events__filter-title">
+                            <div class="filter-form__item">
+                                <div class="filter-form__item-title">
                                     Уровень дохода
                                 </div>
-                                <div class="events__filter-buttons">
-                                    <button type="button" class="btn tag events__filter-button">Запуск</button>
-                                    <button type="button" class="btn tag events__filter-button">Прорыв</button>
-                                    <button type="button" class="btn tag events__filter-button">Опора +</button>
+                                <div class="filter-form__buttons">
+                                    <button type="button" class="btn tag filter-form__button">Запуск</button>
+                                    <button type="button" class="btn tag filter-form__button">Прорыв</button>
+                                    <button type="button" class="btn tag filter-form__button">Опора +</button>
                                 </div>
                             </div>
-                            <div class="events__filter-item">
+                            <div class="filter-form__item">
                                 <label class="events__checkbox form__checkbox">
                                     <input type="checkbox" name="format">
                                     <i aria-hidden="true"></i>
@@ -1042,15 +1042,15 @@
                                     </span>
                                 </label>
                             </div>
-                            <div class="events__filter-item">
-                                <label class="events__radio form__radio">
+                            <div class="filter-form__item">
+                                <label class="filter-form__radio form__radio">
                                     <input id="public" type="radio" name="event_type">
                                     <i aria-hidden="true"></i>
                                     <span for="public">
                                         Открытое мероприятие
                                     </span>
                                 </label>
-                                <label class="events__radio form__radio">
+                                <label class="filter-form__radio form__radio">
                                     <input id="private" type="radio" name="event_type">
                                     <i aria-hidden="true"></i>
                                     <span for="private">
@@ -1058,11 +1058,11 @@
                                     </span>
                                 </label>
                             </div>
-                            <div class="events__filter-form-buttons show-sm-flex">
-                                <button type="reset" class="btn terra-btn terra-btn--gray events__filter-form-button">
+                            <div class="filter-form__actions show-sm-flex">
+                                <button type="reset" class="btn terra-btn terra-btn--gray filter-form__action">
                                     Сбросить
                                 </button>
-                                <button type="submit" class="btn terra-btn terra-btn--blue events__filter-form-button">
+                                <button type="submit" class="btn terra-btn terra-btn--blue filter-form__action">
                                     Применить
                                 </button>
                             </div>
