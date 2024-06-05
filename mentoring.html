@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/libs/vanilla-calendar.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -317,7 +318,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide intro__slide intro__slide--small">
                                 <div class="intro__card">
-                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img" loading="lazy">
                                     <div class="intro__card-info">
                                         <div class="intro__card-title">
                                             Александр Ларкин
@@ -342,7 +343,7 @@
                             </div>
                             <div class="swiper-slide intro__slide intro__slide--small">
                                 <div class="intro__card">
-                                    <img src="img/mentoring-intro-2.jpg" alt="" class="intro__card-img">
+                                    <img src="img/mentoring-intro-2.jpg" alt="" class="intro__card-img" loading="lazy">
                                     <div class="intro__card-info">
                                         <div class="intro__card-title">
                                             Георгий Алек
@@ -367,7 +368,7 @@
                             </div>
                             <div class="swiper-slide intro__slide intro__slide--small">
                                 <div class="intro__card">
-                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img" loading="lazy">
                                     <div class="intro__card-info">
                                         <div class="intro__card-title">
                                             Александр Ларкин
@@ -713,7 +714,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <img src="img/income-stats.png" alt="" class="income__img">
+                            <img src="img/income-stats.png" alt="" class="income__img" loading="lazy">
                         </div>
                     </div>
                 </section>
@@ -739,13 +740,13 @@
                         <div class="swiper gallery__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ">
-                                    <img src="img/gallery-1.jpg" alt="" class="gallery__img">
+                                    <img src="img/gallery-1.jpg" alt="" class="gallery__img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ 2">
-                                    <img src="img/gallery-2.jpg" alt="" class="gallery__img">
+                                    <img src="img/gallery-2.jpg" alt="" class="gallery__img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ 3">
-                                    <img src="img/gallery-3.jpg" alt="" class="gallery__img">
+                                    <img src="img/gallery-3.jpg" alt="" class="gallery__img" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -753,9 +754,7 @@
                     <div class="container">
                         <div class="gallery__footer">
                             <div class="gallery__buttons">
-                                <div class="gallery__caption">
-                                    Название
-                                </div>
+                                <div class="gallery__caption"></div>
                                 <div class="slider-nav gallery__nav">
                                     <button class="btn slider-nav__button slider-nav__button--prev  gallery__nav-button gallery__nav-button--prev">
                                         <svg viewBox="0 0 11 23" width="11" height="23">
@@ -794,7 +793,7 @@
                             </div>
                         </div>
                         <div class="statistics__thumb mentoring-stats__thumb">
-                            <img src="img/stat-graphic.png" alt="" class="statistics__img">
+                            <img src="img/stat-graphic.png" alt="" class="statistics__img" loading="lazy">
                         </div>
                     </div>
                     <div class="mentoring-stats__items">
@@ -900,7 +899,7 @@
                 </div>
                 <div class="rules__inner">
                     <div class="feature rules__card">
-                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/rule-1.svg);"></i>
+                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/brain.svg);"></i>
                         <div class="feature__title">
                             Практика
                         </div>
@@ -910,7 +909,7 @@
                     </div>
                     
                     <div class="feature rules__card">
-                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/rule-2.svg);"></i>
+                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/coin.svg);"></i>
                         <div class="feature__title">
                             Бесплатно
                         </div>
@@ -920,7 +919,7 @@
                     </div>
                     
                     <div class="feature rules__card">
-                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/rule-3.svg);"></i>
+                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/calendar-2.svg);"></i>
                         <div class="feature__title">
                             2-3 месяца
                         </div>
@@ -930,7 +929,7 @@
                     </div>
                     
                     <div class="feature rules__card">
-                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/rule-4.svg);"></i>
+                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/handshake.svg);"></i>
                         <div class="feature__title">
                             Встречи
                         </div>
@@ -940,7 +939,7 @@
                     </div>
                     
                     <div class="feature rules__card">
-                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/rule-5.svg);"></i>
+                        <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/checked.svg);"></i>
                         <div class="feature__title">
                             Отчеты
                         </div>
@@ -968,9 +967,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--has-tags card--white cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #81A4FF;">
-                            <svg stroke="#7098FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-2"></use>
+                        <div class="card card--has-tags card--white cases__card cases__card--colspan cases__card--colspan--first" style="--bgcolor: #81A4FF;">
+                            <svg class="card__bg" width="787" height="284" viewBox="0 0 787 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="0.500061" r="183.5" stroke="#7098FF" stroke-width="80" />
+                                <circle cx="563.5" cy="259.5" r="183.5" stroke="#7098FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -1008,9 +1008,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card cases__card" style="background-color: #BBF7D0;">
-                            <svg stroke="#B0F2C7" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #BBF7D0;">
+                            <svg class="card__bg" width="443" height="284" viewBox="0 0 443 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.500122" r="183.5" stroke="#B0F2C7" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="#B0F2C7" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -1028,9 +1029,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-12.png" alt="" class="card__img">
+                            <img src="img/case-12.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FBE3FF;">
+                        <div class="card cases__card" style="--bgcolor: #FBE3FF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -1047,11 +1048,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-13.png" alt="" class="card__img">
+                            <img src="img/case-13.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #F3F4F7;">
-                            <svg stroke="rgba(255, 255, 255, 0.5)" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #F3F4F7;">
+                            <svg class="card__bg" width="443" height="284" viewBox="0 0 443 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -1069,7 +1071,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-14.png" alt="" class="card__img">
+                            <img src="img/case-14.png" alt="" class="card__img" loading="lazy">
                         </div>
                     </div>
                     <div class="cases__more">
@@ -1126,7 +1128,7 @@
                                         # 236
                                     </span>
                                     <div class="case-card__thumb">
-                                        <img src="img/story-1.jpg" alt="" class="case-card__img">
+                                        <img src="img/story-1.jpg" alt="" class="case-card__img" loading="lazy">
                                     </div>
                                     <div class="case-card__info">
                                         <div class="case-card__title">
@@ -1151,7 +1153,7 @@
                                         # 237
                                     </span>
                                     <div class="case-card__thumb">
-                                        <img src="img/story-2.jpg" alt="" class="case-card__img">
+                                        <img src="img/story-2.jpg" alt="" class="case-card__img" loading="lazy">
                                     </div>
                                     <div class="case-card__info">
                                         <div class="case-card__title">
@@ -1176,7 +1178,7 @@
                                         # 238
                                     </span>
                                     <div class="case-card__thumb">
-                                        <img src="img/story-3.jpg" alt="" class="case-card__img">
+                                        <img src="img/story-3.jpg" alt="" class="case-card__img" loading="lazy">
                                     </div>
                                     <div class="case-card__info">
                                         <div class="case-card__title">
@@ -1201,7 +1203,7 @@
                                         # 239
                                     </span>
                                     <div class="case-card__thumb">
-                                        <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
                                     </div>
                                     <div class="case-card__info">
                                         <div class="case-card__title">
@@ -1226,7 +1228,7 @@
                                         # 239
                                     </span>
                                     <div class="case-card__thumb">
-                                        <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
                                     </div>
                                     <div class="case-card__info">
                                         <div class="case-card__title">
@@ -1431,7 +1433,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <img src="img/join.png" alt="" class="join__img hide-md">
+                            <img src="img/join.png" alt="" class="join__img hide-md" loading="lazy">
                         </div>
                     </div>
                 </section>
@@ -1713,7 +1715,7 @@
     </div>
 </footer>
 
-<div id="location" class="modal location">
+<div id="location" class="modal location" tabindex="0">
     <div class="modal__inner location__inner">
         <button class="btn modal__close">
             Закрыть модальное окно
@@ -1928,8 +1930,35 @@
         </div>
     </div>
 </div>
+<div id="mentor-preview" class="modal mentor-preview" tabindex="0">
+    <div class="modal__inner mentor-preview__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <div class="mentor-preview__content">
+            <div class="mentor-preview__left">
+                <div class="swiper mentor-preview__slider">
+                    <div class="swiper-wrapper"></div>
+                    <div class="mentor-preview__slider-pagination slider-pagination"></div>
+                </div>
+            </div>
+            <div class="mentor-preview__right">
+                <div class="mentor-preview__info">
+                    <div class="mentor-preview__header">
+                        
+                    </div>
+                    <div class="mentor-preview__body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
 <script src="js/libs/swiper-bundle.min.js"></script>
 <script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/vanilla-calendar.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/libs/vanilla-calendar.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -350,12 +351,12 @@
                                 </svg>
                             </form>
                             <div class="blog__view">
-                                <button class="btn view-button view-button--blue blog__view-button view-button--active" data-type="grid" data-container-class="blog__items">
+                                <button class="btn view-button view-button--blue blog__view-button view-button--active" data-type="grid" data-container-class="blog__items" data-cookie-prefix="blog">
                                     <svg viewBox="0 0 16 16" width="16" height="16">
                                         <use href="/img/icons/sprite.svg#view-rect"></use>
                                     </svg>
                                 </button>
-                                <button class="btn view-button view-button--blue blog__view-button" data-type="list" data-container-class="blog__items">
+                                <button class="btn view-button view-button--blue blog__view-button" data-type="list" data-container-class="blog__items" data-cookie-prefix="blog">
                                     <svg viewBox="0 0 16 16" width="16" height="16">
                                         <use href="/img/icons/sprite.svg#view-line"></use>
                                     </svg>
@@ -366,7 +367,7 @@
                     <div class="blog__items blog__items--grid">
                         <article class="article blog__card blog__card--full">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -402,7 +403,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -438,7 +439,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -474,7 +475,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -510,7 +511,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -546,7 +547,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -582,7 +583,7 @@
                         </article>
                         <article class="article blog__card">
                             <a class="article__thumb" href="#">
-                                <img src="img/news-1.jpg" alt="" class="article__img">
+                                <img src="img/news-1.jpg" alt="" class="article__img" loading="lazy">
                             </a>
                             <div class="article__info">
                                 <div class="article__meta">
@@ -953,7 +954,7 @@
     </div>
 </footer>
 
-<div id="location" class="modal location">
+<div id="location" class="modal location" tabindex="0">
     <div class="modal__inner location__inner">
         <button class="btn modal__close">
             Закрыть модальное окно
@@ -1168,8 +1169,35 @@
         </div>
     </div>
 </div>
+<div id="mentor-preview" class="modal mentor-preview" tabindex="0">
+    <div class="modal__inner mentor-preview__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <div class="mentor-preview__content">
+            <div class="mentor-preview__left">
+                <div class="swiper mentor-preview__slider">
+                    <div class="swiper-wrapper"></div>
+                    <div class="mentor-preview__slider-pagination slider-pagination"></div>
+                </div>
+            </div>
+            <div class="mentor-preview__right">
+                <div class="mentor-preview__info">
+                    <div class="mentor-preview__header">
+                        
+                    </div>
+                    <div class="mentor-preview__body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
 <script src="js/libs/swiper-bundle.min.js"></script>
 <script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/vanilla-calendar.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

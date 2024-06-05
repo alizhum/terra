@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/libs/vanilla-calendar.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -427,7 +428,7 @@
                                 </span>
                             </li>
                         </ul>
-                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 intro__link">
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 intro__link xs-stretch">
                             Вступить и маштабировать свой бизнес
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <use href="/img/icons/sprite.svg#arrow-top-right"></use>
@@ -438,19 +439,19 @@
                         <div class="swiper intro__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide intro__slide swiper-slide-active">
-                                    <img src="img/intro-slide-1.jpg" alt="" class="intro__slide-img">
+                                    <img src="img/intro-slide-1.jpg" alt="" class="intro__slide-img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide intro__slide">
-                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide intro__slide">
-                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide intro__slide">
-                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
                                 </div>
                                 <div class="swiper-slide intro__slide">
-                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -478,9 +479,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--white card--has-tags cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #9181FF;">
-                            <svg stroke="#a093ff" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-2"></use>
+                        <div class="card card--white card--has-tags cases__card cases__card--colspan cases__card--colspan--first" style="--bgcolor: #9181FF;">
+                            <svg class="card__bg" width="907" height="284" viewBox="0 0 907 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="124.5" cy="0.5" r="183.5" stroke="#A093FF" stroke-width="80" />
+                                <circle cx="830.5" cy="259.5" r="183.5" stroke="#A093FF" stroke-width="80" />
+                                <circle cx="393.5" cy="380.5" r="117.5" stroke="#A093FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -495,7 +498,7 @@
                                         </div>
                                         <ul class="tags card__tags">
                                             <li class="tags__item">
-                                                <span class="tag tag--no-hover card__tag" href="#" style="background-color: #FFEDD2;">
+                                                <span class="tag tag--no-hover card__tag" href="#" style="--bg-color: #FFEDD2;">
                                                     Москва, ш. Энтузиастов, д.5 стр 2
                                                 </span>
                                             </li>
@@ -520,7 +523,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card cases__card" style="background-color: #CDDEFF;">
+                        <div class="card cases__card" style="--bgcolor: #CDDEFF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -534,11 +537,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-1.png" alt="" class="card__img">
+                            <img src="img/case-1.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #B9F6FF;">
-                            <svg stroke="#a8f4ff" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #B9F6FF;">
+                            <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-47.5" cy="0.500092" r="183.5" stroke="#A8F4FF" stroke-width="80" />
+                                <circle cx="506.5" cy="259.5" r="183.5" stroke="#A8F4FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -553,9 +557,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-2.png" alt="" class="card__img">
+                            <img src="img/case-2.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card cases__card--rowspan" style="background-color: #FBE3FF;">
+                        <div class="card cases__card cases__card--rowspan" style="--bgcolor: #FBE3FF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -572,11 +576,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-3.png" alt="" class="card__img">
+                            <img src="img/case-3.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card cases__card--colspan cases__card--colspan--second" style="background-color: #F3F4F7;">
-                            <svg stroke="#FFF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#radio-wave"></use>
+                        <div class="card cases__card cases__card--colspan cases__card--colspan--second" style="--bgcolor: #F3F4F7;">
+                            <svg class="card__bg" width="635" height="284" viewBox="0 0 635 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="317.5" cy="90.4999" r="90.5" stroke="white" stroke-width="40" />
+                                <circle opacity="0.6" cx="317.5" cy="90.4999" r="151.5" stroke="white" stroke-width="40" />
+                                <circle opacity="0.4" cx="317.5" cy="90.4999" r="222.5" stroke="white" stroke-width="40" />
+                                <circle opacity="0.3" cx="317.5" cy="90.4999" r="297.5" stroke="white" stroke-width="40" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -594,11 +601,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-4.png" alt="" class="card__img">
+                            <img src="img/case-4.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FFE6D8;">
-                            <svg stroke="#FFDCC8" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #FFE6D8;">
+                            <svg class="card__bg" width="443" height="283" viewBox="0 0 443 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.500061" r="183.5" stroke="#FFDCC8" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="#FFDCC8" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -613,11 +621,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-5.png" alt="" class="card__img">
+                            <img src="img/case-5.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FFE4DF;">
-                            <svg stroke="#FFDCD6" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#line"></use>
+                        <div class="card cases__card" style="--bgcolor: #FFE4DF;">
+                            <svg class="card__bg" width="442" height="283" viewBox="0 0 442 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-197 104.644C-178.426 140.603 -112.445 201.057 2.88846 155.193C147.056 97.8627 511.073 -254.353 259.937 204.213C203.814 306.692 236.91 531.759 637 463.25" stroke="#FFDCD6" stroke-width="41" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -632,9 +640,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-6.png" alt="" class="card__img">
+                            <img src="img/case-6.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #F3F4F7;">
+                        <div class="card cases__card" style="--bgcolor: #F3F4F7;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -648,7 +656,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-7.png" alt="" class="card__img">
+                            <img src="img/case-7.png" alt="" class="card__img" loading="lazy">
                         </div>
                     </div>
                     <div class="cases__more">
@@ -679,9 +687,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--white cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #81A4FF;">
-                            <svg stroke="#7098FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-4"></use>
+                        <div class="card card--white cases__card cases__card--colspan cases__card--colspan--first" style="--bgcolor: #81A4FF;">
+                            <svg class="card__bg" width="787" height="284" viewBox="0 0 787 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="0.500061" r="183.5" stroke="#7098FF" stroke-width="80" />
+                                <circle cx="563.5" cy="259.5" r="183.5" stroke="#7098FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -699,11 +708,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-8.png" alt="" class="card__img">
+                            <img src="img/case-8.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #F3F4F7;">
-                            <svg stroke="rgba(255, 255, 255, 0.5)" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #F3F4F7;">
+                            <svg class="card__bg" width="443" height="284" viewBox="0 0 443 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -721,9 +731,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-9.png" alt="" class="card__img">
+                            <img src="img/case-9.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FBE3FF;">
+                        <div class="card cases__card" style="--bgcolor: #FBE3FF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -740,11 +750,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-10.png" alt="" class="card__img">
+                            <img src="img/case-10.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #CDDEFF;">
-                            <svg stroke="#C1D6FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #CDDEFF;">
+                            <svg class="card__bg" width="160" height="224" viewBox="0 0 160 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.5" r="183.5" stroke="#C1D6FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -762,7 +772,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-11.png" alt="" class="card__img">
+                            <img src="img/case-11.png" alt="" class="card__img" loading="lazy">
                         </div>
                     </div>
                     <div class="cases__more">
@@ -793,9 +803,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--has-tags card--white cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #81A4FF;">
-                            <svg stroke="#7098FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-2"></use>
+                        <div class="card card--has-tags card--white cases__card cases__card--colspan cases__card--colspan--first" style="--bgcolor: #81A4FF;">
+                            <svg class="card__bg" width="787" height="284" viewBox="0 0 787 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="0.500061" r="183.5" stroke="#7098FF" stroke-width="80" />
+                                <circle cx="563.5" cy="259.5" r="183.5" stroke="#7098FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -833,9 +844,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card cases__card" style="background-color: #BBF7D0;">
-                            <svg stroke="#B0F2C7" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #BBF7D0;">
+                            <svg class="card__bg" width="443" height="284" viewBox="0 0 443 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.500122" r="183.5" stroke="#B0F2C7" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="#B0F2C7" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -853,9 +865,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-12.png" alt="" class="card__img">
+                            <img src="img/case-12.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FBE3FF;">
+                        <div class="card cases__card" style="--bgcolor: #FBE3FF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -872,11 +884,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-13.png" alt="" class="card__img">
+                            <img src="img/case-13.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #F3F4F7;">
-                            <svg stroke="rgba(255, 255, 255, 0.5)" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #F3F4F7;">
+                            <svg class="card__bg" width="443" height="284" viewBox="0 0 443 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-63.5" cy="0.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
+                                <circle cx="490.5" cy="259.5" r="183.5" stroke="white" stroke-opacity="0.5" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -894,7 +907,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-14.png" alt="" class="card__img">
+                            <img src="img/case-14.png" alt="" class="card__img" loading="lazy">
                         </div>
                     </div>
                     <div class="cases__more">
@@ -922,9 +935,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card cases__card cases__card--colspan cases__card--colspan--first" style="background-color: #BBF7D0;">
-                            <svg stroke="#A0F4BD" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-2"></use>
+                        <div class="card cases__card cases__card--colspan cases__card--colspan--first" style="--bgcolor: #BBF7D0;">
+                            <svg class="card__bg" width="907" height="284" viewBox="0 0 907 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="124.5" cy="0.499756" r="183.5" stroke="#A0F4BD" stroke-width="80" />
+                                <circle cx="830.5" cy="259.5" r="183.5" stroke="#A0F4BD" stroke-width="80" />
+                                <circle cx="393.5" cy="380.5" r="117.5" stroke="#A0F4BD" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -942,11 +957,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-15.png" alt="" class="card__img">
+                            <img src="img/case-15.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #B9F6FF;">
-                            <svg stroke="#A0F3FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #B9F6FF;">
+                            <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="80.5" cy="-89.5" r="183.5" stroke="#A0F3FF" stroke-width="80" />
+                                <circle cx="396.5" cy="392.5" r="183.5" stroke="#A0F3FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -964,9 +980,13 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-16.png" alt="" class="card__img">
+                            <img src="img/case-16.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FFDDCA;">
+                        <div class="card cases__card" style="--bgcolor: #FFE6D8;">
+                            <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="444.5" cy="-77.5" r="183.5" stroke="#FFDDCA" stroke-width="80" />
+                                <circle cx="-22.5" cy="317.5" r="98.5" stroke="#FFDDCA" stroke-width="80" />
+                            </svg>
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -980,9 +1000,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-17.png" alt="" class="card__img">
+                            <img src="img/case-17.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #FBE3FF;">
+                        <div class="card cases__card" style="--bgcolor: #FBE3FF;">
                             <div class="card__inner">
                                 <div class="card__info">
                                     <div class="card__title">
@@ -996,11 +1016,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-10.png" alt="" class="card__img">
+                            <img src="img/case-10.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card cases__card--colspan cases__card--colspan--second" style="background-color: #FBE3FF;">
-                            <svg stroke="#fff" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#spiral"></use>
+                        <div class="card cases__card cases__card--colspan cases__card--colspan--second" style="--bgcolor: #FBE3FF;">
+                            <svg class="card__bg" width="906" height="284" viewBox="0 0 906 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5" d="M-613.287 375.296C-613.516 374.441 -613.916 371.686 -610.726 365.823C-607.476 359.853 -601.32 352.287 -591.386 343.354C-571.567 325.531 -540.07 305.221 -498.428 283.871C-415.44 241.323 -296.049 196.6 -160.026 160.153C-24.0021 123.706 101.755 102.741 194.898 98.0944C241.637 95.7629 279.069 97.6033 305.143 103.129C318.214 105.899 327.328 109.373 333.127 112.919C338.822 116.4 339.853 118.987 340.082 119.842C340.311 120.697 340.712 123.453 337.521 129.315C334.271 135.285 328.115 142.851 318.181 151.785C298.362 169.608 266.866 189.918 225.223 211.268C142.235 253.816 22.8441 298.538 -113.179 334.985C-249.203 371.433 -374.959 392.398 -468.103 397.044C-514.842 399.375 -552.274 397.535 -578.348 392.009C-591.418 389.239 -600.533 385.765 -606.332 382.22C-612.027 378.738 -613.058 376.152 -613.287 375.296Z" stroke="white" stroke-width="40" />
+                                <path opacity="0.5" d="M-887.609 448.801C-888.927 443.883 -888.477 436.644 -882.66 425.966C-876.785 415.18 -866.23 402.47 -850.3 388.151C-818.488 359.558 -768.605 327.517 -703.569 294.184C-573.795 227.671 -387.589 157.977 -175.813 101.232C35.9631 44.4863 232.069 11.7402 377.713 4.45503C450.702 0.804128 509.923 3.61081 551.769 12.4674C572.725 16.9026 588.22 22.6331 598.701 29.0361C609.078 35.3754 613.087 41.4189 614.405 46.3375C615.723 51.2561 615.273 58.4947 609.456 69.173C603.581 79.9585 593.027 92.6691 577.096 106.988C545.284 135.581 495.401 167.622 430.365 200.955C300.591 267.468 114.385 337.162 -97.3909 393.907C-309.167 450.652 -505.273 483.399 -650.917 490.684C-723.906 494.335 -783.127 491.528 -824.973 482.671C-845.929 478.236 -861.424 472.506 -871.905 466.103C-882.282 459.763 -886.291 453.72 -887.609 448.801Z" stroke="white" stroke-width="40" />
+                                <path opacity="0.5" d="M-1205.4 533.953C-1207.99 524.293 -1206.55 511.832 -1197.69 495.557C-1188.78 479.174 -1173.13 460.485 -1150.26 439.91C-1104.57 398.805 -1033.4 353.141 -941.27 305.899C-757.314 211.567 -493.719 112.91 -194.189 32.6508C105.341 -47.6081 382.95 -93.9658 589.426 -104.25C692.832 -109.4 777.3 -105.44 837.424 -92.689C867.519 -86.3065 890.412 -77.9438 906.323 -68.2122C922.128 -58.5448 929.607 -48.4742 932.195 -38.814C934.784 -29.1539 933.342 -16.6933 924.488 -0.418119C915.575 15.965 899.93 34.6537 877.059 55.2284C831.365 96.3333 760.194 141.997 668.067 189.24C484.111 283.572 220.516 382.229 -79.0145 462.488C-378.545 542.747 -656.153 589.104 -862.63 599.389C-966.035 604.539 -1050.5 600.579 -1110.63 587.828C-1140.72 581.445 -1163.62 573.082 -1179.53 563.351C-1195.33 553.683 -1202.81 543.613 -1205.4 533.953Z" stroke="white" stroke-width="40" />
+                                <path opacity="0.5" d="M-1542.51 624.28C-1546.43 609.622 -1543.95 591.648 -1531.86 569.453C-1519.72 547.15 -1498.68 522.137 -1468.44 494.943C-1408.01 440.599 -1314.24 380.516 -1193.37 318.545C-951.921 194.757 -606.221 65.4085 -213.6 -39.794C179.02 -144.996 543.079 -205.827 814.074 -219.348C949.738 -226.116 1060.98 -220.965 1140.49 -204.117C1180.27 -195.686 1211.01 -184.548 1232.67 -171.303C1254.23 -158.122 1265.38 -143.801 1269.3 -129.142C1273.23 -114.484 1270.74 -96.5098 1258.66 -74.3147C1246.52 -52.0119 1225.47 -26.9991 1195.23 0.195054C1134.8 54.5387 1041.04 114.622 920.166 176.593C678.717 300.381 333.018 429.729 -59.603 534.932C-452.224 640.134 -816.282 700.965 -1087.28 714.486C-1222.94 721.254 -1334.19 716.103 -1413.69 699.255C-1453.48 690.824 -1484.21 679.686 -1505.88 666.441C-1527.44 653.26 -1538.58 638.939 -1542.51 624.28Z" stroke="white" stroke-width="40" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -1018,11 +1041,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-18.png" alt="" class="card__img">
+                            <img src="img/case-18.png" alt="" class="card__img" loading="lazy">
                         </div>
-                        <div class="card cases__card" style="background-color: #B6CFFF;">
-                            <svg stroke="#ABC8FF" class="card__bubble">
-                                <use href="/img/icons/sprite.svg#bubble-3"></use>
+                        <div class="card cases__card" style="--bgcolor: #B6CFFF;">
+                            <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="-23.5" cy="-71.5" r="183.5" stroke="#ABC8FF" stroke-width="80" />
+                                <circle cx="444.5" cy="316.5" r="183.5" stroke="#ABC8FF" stroke-width="80" />
                             </svg>
                             <div class="card__inner">
                                 <div class="card__info">
@@ -1040,7 +1064,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="img/case-19.png" alt="" class="card__img">
+                            <img src="img/case-19.png" alt="" class="card__img" loading="lazy">
                         </div>
                     </div>
                     <div class="cases__more">
@@ -1051,7 +1075,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-gap-bottom projects ">
+        <section class="section section-gap-bottom projects">
             <div class="projects__inner">
                 <div class="container">
                     <div class="section__header section__header--half">
@@ -1090,8 +1114,9 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide projects__slide">
                                 <div class="card projects__card" style="background-color: #FFE6D8;">
-                                    <svg stroke="#ffdac6" class="card__bubble">
-                                        <use href="/img/icons/sprite.svg#bubble-3"></use>
+                                    <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="80.5" cy="-89.5" r="183.5" stroke="#FFDAC6" stroke-width="80" />
+                                        <circle cx="396.5" cy="392.5" r="183.5" stroke="#FFDAC6" stroke-width="80" />
                                     </svg>
                                     <div class="card__inner">
                                         <div class="card__info">
@@ -1106,13 +1131,14 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="img/project-1.png" alt="" class="card__img">
+                                    <img src="img/project-1.png" alt="" class="card__img" loading="lazy">
                                 </div>
                             </div>
                             <div class="swiper-slide projects__slide">
                                 <div class="card projects__card" style="background-color: #CDDEFF;">
-                                    <svg stroke="#c0d6ff" class="card__bubble">
-                                        <use href="/img/icons/sprite.svg#bubble-2"></use>
+                                    <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="-48.5" cy="259.5" r="183.5" stroke="#C0D6FF" stroke-width="80" />
+                                        <circle cx="430.5" cy="-39.5" r="183.5" stroke="#C0D6FF" stroke-width="80" />
                                     </svg>
                                     <div class="card__inner">
                                         <div class="card__info">
@@ -1127,13 +1153,14 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="img/project-2.png" alt="" class="card__img">
+                                    <img src="img/project-2.png" alt="" class="card__img" loading="lazy">
                                 </div>
                             </div>
                             <div class="swiper-slide projects__slide">
                                 <div class="card projects__card" style="background-color: #FBE3FF;">
-                                    <svg stroke="#F9D9FF" class="card__bubble">
-                                        <use href="/img/icons/sprite.svg#bubble-3"></use>
+                                    <svg class="card__bg" width="442" height="284" viewBox="0 0 442 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="-15.5" cy="-39.5" r="183.5" stroke="#F9D9FF" stroke-width="80" />
+                                        <circle cx="396.5" cy="392.5" r="183.5" stroke="#F9D9FF" stroke-width="80" />
                                     </svg>
                                     <div class="card__inner">
                                         <div class="card__info">
@@ -1148,13 +1175,13 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="img/project-3.png" alt="" class="card__img">
+                                    <img src="img/project-3.png" alt="" class="card__img" loading="lazy">
                                 </div>
                             </div>
                             <div class="swiper-slide projects__slide">
                                 <div class="card projects__card" style="background-color: #B9F6FF;">
-                                    <svg stroke="#a0f3ff" class="card__bubble">
-                                        <use href="/img/icons/sprite.svg#bubble-3"></use>
+                                    <svg class="card__bg" width="41" height="257" viewBox="0 0 41 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="80.5" cy="-116.5" r="183.5" stroke="#A0F3FF" stroke-width="80" />
                                     </svg>
                                     <div class="card__inner">
                                         <div class="card__info">
@@ -1169,7 +1196,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="img/case-16.png" alt="" class="card__img">
+                                    <img src="img/case-16.png" alt="" class="card__img" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -1211,30 +1238,30 @@
                         </div>
                     </div>
                     <div class="section__header-right events__header-right">
-                        <button class="btn events__view-button events__filter-toggle filter-toggle show-sm">
+                        <button class="btn events__view-button events__filter-toggle filter-toggle show-md">
                             <svg viewBox="0 0 16 16" width="16" height="16">
                                 <use href="/img/icons/sprite.svg#filter"></use>
                             </svg>
                         </button>
                         <div class="events__view">
-                            <button class="btn view-button events__view-button view-button--active" data-type="horizontal">
+                            <button class="btn view-button events__view-button view-button--active" data-type="horizontal" data-cookie-prefix="events" data-container-class="events__slider">
                                 <svg viewBox="0 0 16 16" width="16" height="16">
                                     <use href="/img/icons/sprite.svg#view-rect"></use>
                                 </svg>
                             </button>
-                            <button class="btn view-button events__view-button" data-type="vertical">
+                            <button class="btn view-button events__view-button" data-type="vertical" data-cookie-prefix="events" data-container-class="events__slider">
                                 <svg viewBox="0 0 16 16" width="16" height="16">
                                     <use href="/img/icons/sprite.svg#view-line"></use>
                                 </svg>
                             </button>
                         </div>
                         <div class="slider-nav events__nav">
-                            <button class="btn slider-nav__button slider-nav__button--prev events__nav-button events__nav-button--prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-7f6c8b109f525145d" aria-disabled="true">
+                            <button class="btn slider-nav__button slider-nav__button--prev events__nav-button events__nav-button--prev">
                                 <svg viewBox="0 0 11 23" width="11" height="23">
                                     <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
                                 </svg>
                             </button>
-                            <button class="btn slider-nav__button slider-nav__button--next events__nav-button events__nav-button--next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-7f6c8b109f525145d" aria-disabled="false">
+                            <button class="btn slider-nav__button slider-nav__button--next events__nav-button events__nav-button--next">
                                 <svg viewBox="0 0 11 23" width="11" height="23">
                                     <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
                                 </svg>
@@ -1245,7 +1272,7 @@
                 <div class="events__inner">
                     <div class="events__filter">
                         <form action="#" class="form filter-form events__filter-form">
-                            <div class="filter-form__header show-sm-flex">
+                            <div class="filter-form__header show-md-flex">
                                 <div class="filter-form__title">
                                     Фильтр
                                 </div>
@@ -1304,7 +1331,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <div class="filter-form__actions show-sm-flex">
+                            <div class="filter-form__actions show-md-flex">
                                 <button type="reset" class="btn terra-btn terra-btn--gray filter-form__action">
                                     Сбросить
                                 </button>
@@ -1313,7 +1340,7 @@
                                 </button>
                             </div>
                         </form>
-                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 events__link">
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 events__link xs-stretch">
                             записаться на мероприятие
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <use href="/img/icons/sprite.svg#arrow-top-right"></use>
@@ -1321,13 +1348,13 @@
                         </a>
                     </div>
                     <div class="events__right">
-                        <div class="swiper events__slider">
+                        <div class="swiper events__slider events__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide events__slide events__slide--double">
                                     <div class="events__cards">
                                         <a class="events__card events__card--horizontal events__card--reverse" href="#">
                                             <div class="events__card-thumb events__card-thumb--circle">
-                                                <img src="img/event-1.jpg" alt="" class="events__card-img">
+                                                <img src="img/event-1.jpg" alt="" class="events__card-img" loading="lazy">
                                             </div>
                                             <div class="events__card-info">
                                                 <div class="events__card-title">
@@ -1346,7 +1373,7 @@
                                         </a>
                                         <a class="events__card events__card--horizontal" href="#">
                                             <div class="events__card-thumb">
-                                                <img src="img/event-2.jpg" alt="" class="events__card-img">
+                                                <img src="img/event-2.jpg" alt="" class="events__card-img" loading="lazy">
                                             </div>
                                             <div class="events__card-info">
                                                 <div class="events__card-title">
@@ -1368,7 +1395,7 @@
                                 <div class="swiper-slide events__slide">
                                     <a class="events__card" href="#">
                                         <div class="events__card-thumb">
-                                            <img src="img/event-3.jpg" alt="" class="events__card-img">
+                                            <img src="img/event-3.jpg" alt="" class="events__card-img" loading="lazy">
                                         </div>
                                         <div class="events__card-info">
                                             <div class="events__card-title">
@@ -1389,7 +1416,7 @@
                                 <div class="swiper-slide events__slide">
                                     <a class="events__card" href="#">
                                         <div class="events__card-thumb">
-                                            <img src="img/event-4.jpg" alt="" class="events__card-img">
+                                            <img src="img/event-4.jpg" alt="" class="events__card-img" loading="lazy">
                                         </div>
                                         <div class="events__card-info">
                                             <div class="events__card-title">
@@ -1410,7 +1437,7 @@
                                 <div class="swiper-slide events__slide">
                                     <a class="events__card" href="#">
                                         <div class="events__card-thumb">
-                                            <img src="img/event-4.jpg" alt="" class="events__card-img">
+                                            <img src="img/event-4.jpg" alt="" class="events__card-img" loading="lazy">
                                         </div>
                                         <div class="events__card-info">
                                             <div class="events__card-title">
@@ -1431,7 +1458,7 @@
                                 <div class="swiper-slide events__slide">
                                     <a class="events__card" href="#">
                                         <div class="events__card-thumb">
-                                            <img src="img/event-4.jpg" alt="" class="events__card-img">
+                                            <img src="img/event-4.jpg" alt="" class="events__card-img" loading="lazy">
                                         </div>
                                         <div class="events__card-info">
                                             <div class="events__card-title">
@@ -1516,7 +1543,7 @@
                     </div>
                     <div class="statistics__thumb-wrap">
                         <div class="statistics__thumb">
-                            <img src="img/stat-graphic.png" alt="" class="statistics__img">
+                            <img src="img/stat-graphic.png" alt="" class="statistics__img" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -1580,7 +1607,7 @@
                         <svg class="terra__icon terra__icon--right" width="104" height="94" viewBox="0 0 104 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M46.834 0.5H57.1673C82.8486 0.5 103.667 21.3188 103.667 47C103.667 72.6812 82.8486 93.5 57.1673 93.5H21.0006C9.58677 93.5 0.333984 84.2472 0.333984 72.8333V47C0.333984 21.3188 21.1527 0.5 46.834 0.5ZM70.4169 39.2184C71.8261 37.6078 71.6629 35.1598 70.0523 33.7505C68.4417 32.3412 65.9937 32.5044 64.5844 34.115L49.7566 51.0611C49.3014 51.5813 48.5173 51.651 47.9776 51.2192L38.9213 43.9742C37.2502 42.6373 34.8117 42.9082 33.4748 44.5794C32.1379 46.2505 32.4088 48.689 34.0799 50.0259L43.1362 57.2709C46.9145 60.2936 52.4028 59.806 55.589 56.1645L70.4169 39.2184Z" fill="#44C2EA" />
                           </svg>
-                        <img src="img/terra-people.png" alt="" class="terra__img">
+                        <img src="img/terra-people.png" alt="" class="terra__img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1621,7 +1648,7 @@
                                 Ошо
                             </span>
                         </blockquote>
-                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mission__link">
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mission__link xs-stretch">
                             Вступить и маштабировать свой бизнес
                             <svg viewBox="0 0 24 24" width="24" height="24">
                                 <use href="/img/icons/sprite.svg#arrow-top-right"></use>
@@ -1630,7 +1657,7 @@
                     </div>
                     <a class="video mission__video" href="https://www.youtube.com/watch?v=k0Zx6KRPgpw&ab_channel=%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D1%88%D0%BA%D0%BE%D0%BB%D0%B0Terra" data-fancybox="video-gallery">
                         <div class="video__preview mission__video-preview">
-                            <img src="img/video-preview.jpg" alt="" class="mission__video-preview-img video__preview-img">
+                            <img src="img/video-preview.jpg" alt="" class="mission__video-preview-img video__preview-img" loading="lazy">
                         </div>
                         <span class="video__play">
                             <svg viewBox="0 0 28 28" width="28" height="28">
@@ -1687,7 +1714,7 @@
                                             # 236
                                         </span>
                                         <div class="case-card__thumb">
-                                            <img src="img/story-1.jpg" alt="" class="case-card__img">
+                                            <img src="img/story-1.jpg" alt="" class="case-card__img" loading="lazy">
                                         </div>
                                         <div class="case-card__info">
                                             <div class="case-card__title">
@@ -1712,7 +1739,7 @@
                                             # 237
                                         </span>
                                         <div class="case-card__thumb">
-                                            <img src="img/story-2.jpg" alt="" class="case-card__img">
+                                            <img src="img/story-2.jpg" alt="" class="case-card__img" loading="lazy">
                                         </div>
                                         <div class="case-card__info">
                                             <div class="case-card__title">
@@ -1737,7 +1764,7 @@
                                             # 238
                                         </span>
                                         <div class="case-card__thumb">
-                                            <img src="img/story-3.jpg" alt="" class="case-card__img">
+                                            <img src="img/story-3.jpg" alt="" class="case-card__img" loading="lazy">
                                         </div>
                                         <div class="case-card__info">
                                             <div class="case-card__title">
@@ -1762,7 +1789,7 @@
                                             # 239
                                         </span>
                                         <div class="case-card__thumb">
-                                            <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                            <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
                                         </div>
                                         <div class="case-card__info">
                                             <div class="case-card__title">
@@ -1787,7 +1814,7 @@
                                             # 239
                                         </span>
                                         <div class="case-card__thumb">
-                                            <img src="img/story-4.jpg" alt="" class="case-card__img">
+                                            <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
                                         </div>
                                         <div class="case-card__info">
                                             <div class="case-card__title">
@@ -1846,8 +1873,10 @@
                 </div>
                 <div class="charity__inner">
                     <div class="card charity__card" style="background-color: #FFDCD6;">
-                        <svg stroke="#FFD2CA" class="card__bubble">
-                            <use href="/img/icons/sprite.svg#bubble"></use>
+                        <svg class="card__bg" width="666" height="284" viewBox="0 0 666 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="91.5" cy="0.5" r="183.5" stroke="#FFD2CA" stroke-width="80" />
+                            <circle cx="716.5" cy="-76.5" r="183.5" stroke="#FFD2CA" stroke-width="80" />
+                            <circle cx="500.5" cy="341.5" r="117.5" stroke="#FFD2CA" stroke-width="80" />
                         </svg>
                         <div class="card__inner">
                             <div class="card__info">
@@ -1865,9 +1894,14 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="img/charity-1.png" alt="" class="card__img">
+                        <img src="img/charity-1.png" alt="" class="card__img" loading="lazy">
                     </div>
                     <div class="card charity__card" style="background-color: #FFE6D8;">
+                        <svg class="card__bg" width="666" height="284" viewBox="0 0 666 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="91.5" cy="0.5" r="183.5" stroke="#FFE1D0" stroke-width="80" />
+                            <circle cx="716.5" cy="-76.5" r="183.5" stroke="#FFE1D0" stroke-width="80" />
+                            <circle cx="500.5" cy="341.5" r="117.5" stroke="#FFE1D0" stroke-width="80" />
+                        </svg>
                         <div class="card__inner">
                             <div class="card__info">
                                 <div class="card__title">
@@ -1884,7 +1918,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="img/charity-2.png" alt="" class="card__img">
+                        <img src="img/charity-2.png" alt="" class="card__img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -2282,7 +2316,6 @@
                             </div>
                         </div>
                     </form>
-                    
                 </div>
             </div>
         </section>
@@ -2301,13 +2334,13 @@
                     <div class="swiper gallery__slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ">
-                                <img src="img/gallery-1.jpg" alt="" class="gallery__img">
+                                <img src="img/gallery-1.jpg" alt="" class="gallery__img" loading="lazy">
                             </div>
                             <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ 2">
-                                <img src="img/gallery-2.jpg" alt="" class="gallery__img">
+                                <img src="img/gallery-2.jpg" alt="" class="gallery__img" loading="lazy">
                             </div>
                             <div class="swiper-slide gallery__slide" data-caption="Оборудованные залы для проведения школ 3">
-                                <img src="img/gallery-3.jpg" alt="" class="gallery__img">
+                                <img src="img/gallery-3.jpg" alt="" class="gallery__img" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2315,9 +2348,7 @@
                 <div class="container">
                     <div class="gallery__footer">
                         <div class="gallery__buttons">
-                            <div class="gallery__caption">
-                                Оборудованные залы для проведения школ
-                            </div>
+                            <div class="gallery__caption"></div>
                             <div class="slider-nav gallery__nav">
                                 <button class="btn slider-nav__button slider-nav__button--prev  gallery__nav-button gallery__nav-button--prev">
                                     <svg viewBox="0 0 11 23" width="11" height="23">
@@ -2970,7 +3001,7 @@
     </div>
 </footer>
 
-<div id="location" class="modal location">
+<div id="location" class="modal location" tabindex="0">
     <div class="modal__inner location__inner">
         <button class="btn modal__close">
             Закрыть модальное окно
@@ -3185,8 +3216,35 @@
         </div>
     </div>
 </div>
+<div id="mentor-preview" class="modal mentor-preview" tabindex="0">
+    <div class="modal__inner mentor-preview__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <div class="mentor-preview__content">
+            <div class="mentor-preview__left">
+                <div class="swiper mentor-preview__slider">
+                    <div class="swiper-wrapper"></div>
+                    <div class="mentor-preview__slider-pagination slider-pagination"></div>
+                </div>
+            </div>
+            <div class="mentor-preview__right">
+                <div class="mentor-preview__info">
+                    <div class="mentor-preview__header">
+                        
+                    </div>
+                    <div class="mentor-preview__body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
 <script src="js/libs/swiper-bundle.min.js"></script>
 <script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/vanilla-calendar.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

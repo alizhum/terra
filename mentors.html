@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/libs/vanilla-calendar.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -298,18 +299,18 @@
                     </h2>
                 </div>
                 <div class="list__header">
-                    <button class="btn filter-toggle filter-toggle--gray show-sm-flex">
+                    <button class="btn filter-toggle filter-toggle--gray show-md-flex">
                         <svg viewBox="0 0 16 16" width="16" height="16">
                             <use href="/img/icons/sprite.svg#filter"></use>
                         </svg>
                     </button>
-                    <form class="form search-form list__search hide-sm">
+                    <form class="form search-form list__search hide-md">
                         <input class="form__field search-form__input" type="text" placeholder="Найти наставника">
                         <svg class="search-form__icon" viewBox="0 0 24 24" width="24" height="24">
                             <use href="/img/icons/sprite.svg#magnifying-glass"></use>
                         </svg>
                     </form>
-                    <ul class="tags list__terms blue-scrollbar hide-sm">
+                    <ul class="tags list__terms list__terms--short blue-scrollbar hide-md">
                         <li class="list__terms-item">
                             <a href="#" class="tag tag--outline list__term">
                                 Программирование
@@ -333,13 +334,13 @@
                             <option value="desc">Сначала старые</option>
                         </select>
                     </div>
-                    <div class="list__view hide-md">
-                        <button class="btn view-button view-button--blue list__view-button view-button--active" data-type="grid" data-container-class="list__items">
+                    <div class="list__view hide-xl">
+                        <button class="btn view-button view-button--blue list__view-button view-button--active" data-type="grid" data-container-class="list__items" data-cookie-prefix="list">
                             <svg viewBox="0 0 16 16" width="16" height="16">
                                 <use href="/img/icons/sprite.svg#view-rect"></use>
                             </svg>
                         </button>
-                        <button class="btn view-button view-button--blue list__view-button" data-type="list" data-container-class="list__items">
+                        <button class="btn view-button view-button--blue list__view-button" data-type="list" data-container-class="list__items" data-cookie-prefix="list">
                             <svg viewBox="0 0 16 16" width="16" height="16">
                                 <use href="/img/icons/sprite.svg#view-line"></use>
                             </svg>
@@ -349,7 +350,7 @@
                 <div class="list__inner">
                     <aside class="list__sidebar">
                         <form action="#" class="form filter-form list__filter">
-                            <div class="filter-form__header show-sm-flex">
+                            <div class="filter-form__header show-md-flex">
                                 <div class="filter-form__title">
                                     Фильтр
                                 </div>
@@ -358,7 +359,7 @@
                                 </button>
                             </div>
                             <div class="filter-form__item">
-                                <div class="form search-form list__search show-sm">
+                                <div class="form search-form list__search show-md">
                                     <input class="form__field search-form__input" type="text" placeholder="Найти наставника">
                                     <svg class="search-form__icon" viewBox="0 0 24 24" width="24" height="24">
                                         <use href="/img/icons/sprite.svg#magnifying-glass"></use>
@@ -423,7 +424,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <div class="filter-form__actions show-sm-flex">
+                            <div class="filter-form__actions show-md-flex">
                                 <button type="reset" class="btn terra-btn terra-btn--gray filter-form__action">
                                     Сбросить
                                 </button>
@@ -439,9 +440,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -509,7 +510,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -525,9 +526,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -595,7 +596,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -611,9 +612,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -681,7 +682,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -697,9 +698,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -767,7 +768,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -783,9 +784,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -853,7 +854,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -869,9 +870,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -939,7 +940,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -955,9 +956,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1025,7 +1026,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1041,9 +1042,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1111,7 +1112,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1127,9 +1128,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1197,7 +1198,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1213,9 +1214,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1283,7 +1284,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1299,9 +1300,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1369,7 +1370,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1385,9 +1386,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1455,7 +1456,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1471,9 +1472,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1541,7 +1542,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1557,9 +1558,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1627,7 +1628,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1643,9 +1644,9 @@
                                 <div class="mentor-card__thumb">
                                     <div class="mentor-card__gallery">
                                         <img src="img/mentor_image.jpg" alt="" class="mentor-card__image" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
-                                        <img src="img/mentor_image.jpg" alt="" class="mentor-card__image mentor-card--on-modal" loading="lazy">
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
+                                        <span data-src="img/mentor_image.jpg" class="mentor-card__image mentor-card--on-modal"></span>
                                     </div>
                                     <ul class="mentor-card__tags tags">
                                         <li class="mentor-card__tags-item">
@@ -1713,7 +1714,7 @@
                                         </li>
                                     </ul>
                                     <div class="mentor-card__links">
-                                        <button class="btn mentor-card__link">
+                                        <button class="btn mentor-card__link open-modal" data-id="mentor-preview">
                                             Быстрый просмотр
                                         </button>
                                         <a href="#" class="mentor-card__link">
@@ -1788,6 +1789,461 @@
                                 Загрузить еще
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap-bottom quiz">
+            <div class="container">
+                <div class="section__half quiz__inner">
+                    <div class="section__header mb0 quiz__header">
+                        <svg class="section__header-line" width="315" height="122" viewBox="0 0 315 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2279L4.65857 65.6583L64.8273 60.0026L25.1367 73.0364L47.9013 111.926L116.921 103.327L122.36 121.885L288.826 97.2238L293.479 64.9974L314.91 60.3714L301.643 13.2794L246.094 15.116L239.502 0L0 14.2279Z" fill="#E1F8FF"></path>
+                        </svg>
+                        <h2 class="section__title">
+                            Не смог определиться <span>куда пойти?</span>
+                        </h2>
+                        <div class="section__description">
+                            Ответь на 5 вопросов и найди путь в Терре!
+                        </div>
+                    </div>
+                    <form class="form quiz__form">
+                        <div class="quiz__inner">
+                            <div class="quiz__dots">
+                            </div>
+                            <div class="quiz__step quiz__step--current">
+                                <div class="quiz__step-header">
+                                    <div class="quiz__step-title">
+                                        Какой у Вас чистый доход? 
+                                    </div>
+                                </div>
+                                <div class="quiz__step-body">
+                                    <div class="quiz__options">
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q1" value="До 300к">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                До 300к
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q1" value="От 300к до 1 млн">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                От 300к до 1 млн
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q1" value="Более 1 млн">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Более 1 млн
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q1" value="Более 1 млн">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Более 1 млн
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz__step-footer">
+                                    <div class="quiz__step-buttons">
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--next" disabled>
+                                            Продолжить
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__step">
+                                <div class="quiz__step-header">
+                                    <div class="quiz__step-title">
+                                        Какого размера нужна баня?
+                                    </div>
+                                </div>
+                                <div class="quiz__step-body">
+                                    <div class="quiz__options">
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q2" value="3x4">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                3x4
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q2" value="4x4">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                4x4
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q2" value="4x6">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                4x6
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz__step-footer">
+                                    <div class="quiz__step-buttons">
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--prev">
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                            Назад
+                                        </button>
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--next" disabled>
+                                            Продолжить
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__step">
+                                <div class="quiz__step-header">
+                                    <div class="quiz__step-title">
+                                        Сколько этажей планируете?
+                                    </div>
+                                </div>
+                                <div class="quiz__step-body">
+                                    <div class="quiz__options">
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q3" value="1">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                               1
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q3" value="2">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                2
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q3" value="3">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                3
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz__step-footer">
+                                    <div class="quiz__step-buttons">
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--prev">
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                            Назад
+                                        </button>
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--next" disabled>
+                                            Продолжить
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__step">
+                                <div class="quiz__step-header">
+                                    <div class="quiz__step-title">
+                                        Какой будет фундамент под баней?
+                                    </div>
+                                </div>
+                                <div class="quiz__step-body">
+                                    <div class="quiz__options">
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q4" value="Блочный">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Блочный
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q4" value="Свайно-винтовой">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Свайно-винтовой
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q4" value="Монолитный">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Монолитный
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz__step-footer">
+                                    <div class="quiz__step-buttons">
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--prev">
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                            Назад
+                                        </button>
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--next" disabled>
+                                            Продолжить
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__step">
+                                <div class="quiz__step-header">
+                                    <div class="quiz__step-title">
+                                        У вас уже есть участок?
+                                    </div>
+                                </div>
+                                <div class="quiz__step-body">
+                                    <div class="quiz__options">
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q5" value="Да, есть">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Да, есть
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q5" value="Пока нет">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                Пока нет
+                                            </span>
+                                        </label>
+                                        <label class="quiz__option form__radio">
+                                            <input type="radio" name="q5" value="В поиске">
+                                            <i aria-hidden="true"></i>
+                                            <span>
+                                                В поиске
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz__step-footer">
+                                    <div class="quiz__step-buttons">
+                                        <button type="button" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--prev">
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                            Назад
+                                        </button>
+                                        <button type="submit" class="btn terra-btn terra-btn--blue terra-btn--52 quiz__step-button quiz__step-button--next" disabled>
+                                            Отправить
+                                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="section section-gap-bottom stories">
+            <div class="container">
+                <div class="section__header section__header--half">
+                    <div class="section__header-heading">
+                        <h2 class="section__title">
+                            Истории <span>успеха учеников</span>
+                        </h2>
+                    </div>
+                    <div class="section__header-right hide-sm">
+                        <a href="#" class="stories__youtube" target="_blank">
+                            <svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7379 0.642501C28.0229 0.988464 29.0361 2.00164 29.3821 3.28664C30.0246 5.63424 29.9999 10.5271 29.9999 10.5271C29.9999 10.5271 29.9999 15.3953 29.3821 17.7429C29.0361 19.0279 28.0229 20.0411 26.7379 20.3871C24.3903 21.0049 14.9999 21.0049 14.9999 21.0049C14.9999 21.0049 5.63424 21.0049 3.26193 20.3624C1.97693 20.0164 0.963752 19.0032 0.61779 17.7182C0 15.3953 0 10.5024 0 10.5024C0 10.5024 0 5.63424 0.61779 3.28664C0.963752 2.00164 2.00164 0.963752 3.26193 0.61779C5.60953 0 14.9999 0 14.9999 0C14.9999 0 24.3903 0 26.7379 0.642501ZM19.8187 10.5025L12.0098 15V6.00494L19.8187 10.5025Z" fill="#FF0000" />
+                            </svg>
+                            Мы YouTube 
+                        </a>
+                        <a href="#" class="terra-btn terra-btn--outline terra-btn--52">
+                            Все материалы
+                            <svg viewBox="0 0 12 12" width="12" height="12">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </a>
+                        <div class="slider-nav stories__nav">
+                            <button class="btn slider-nav__button slider-nav__button--prev stories__nav-button stories__nav-button--prev">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <button class="btn slider-nav__button slider-nav__button--next stories__nav-button stories__nav-button--next">
+                                <svg viewBox="0 0 11 23" width="11" height="23">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container stories__inner">
+                <div class="swiper stories__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card case-card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 236
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-1.jpg" alt="" class="case-card__img" loading="lazy">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Заработал через энергию внутри себя
+                                        </div>
+                                        <div class="case-card__description">
+                                            Благодаря помощи наставника
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 237
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-2.jpg" alt="" class="case-card__img" loading="lazy">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Трансформация, состояние, вера в себя и окружение
+                                        </div>
+                                        <div class="case-card__description">
+                                            помогло мне вырасти в доходе до 600000 т.р в месяц
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 238
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-3.jpg" alt="" class="case-card__img" loading="lazy">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Я поверил, что мне можно все
+                                        </div>
+                                        <div class="case-card__description">
+                                            и закрыл 2 сделки на 500 000 рублей
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 239
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Все думали, что я фрик. А я сделала х3 на вокале!
+                                        </div>
+                                        <div class="case-card__description">
+                                            За два месяца с 70000 до 470000 руб!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide stories__slide">
+                            <a class="case-card stories__card" href="#">
+                                <div class="case-card__inner">
+                                    <span class="case-card__number">
+                                        # 239
+                                    </span>
+                                    <div class="case-card__thumb">
+                                        <img src="img/story-4.jpg" alt="" class="case-card__img" loading="lazy">
+                                    </div>
+                                    <div class="case-card__info">
+                                        <div class="case-card__title">
+                                            Все думали, что я фрик. А я сделала х3 на вокале!
+                                        </div>
+                                        <div class="case-card__description">
+                                            За два месяца с 70000 до 470000 руб!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-card__arrow">
+                                    <svg class="case-card__arrow-icon" viewBox="0 0 33 33" width="33" height="33">
+                                        <use href="/img/icons/sprite.svg#arrow-rect"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section__header-right section__footer show-sm-flex">
+                    <a href="#" class="terra-btn stories__more terra-btn--outline terra-btn--52">
+                        Все материалы
+                        <svg viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </a>
+                    <div class="slider-nav stories__nav">
+                        <button class="btn slider-nav__button slider-nav__button--prev stories__nav-button stories__nav-button--prev">
+                            <svg viewBox="0 0 11 23" width="11" height="23">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </button>
+                        <button class="btn slider-nav__button slider-nav__button--next stories__nav-button stories__nav-button--next">
+                            <svg viewBox="0 0 11 23" width="11" height="23">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2068,7 +2524,7 @@
     </div>
 </footer>
 
-<div id="location" class="modal location">
+<div id="location" class="modal location" tabindex="0">
     <div class="modal__inner location__inner">
         <button class="btn modal__close">
             Закрыть модальное окно
@@ -2283,8 +2739,35 @@
         </div>
     </div>
 </div>
+<div id="mentor-preview" class="modal mentor-preview" tabindex="0">
+    <div class="modal__inner mentor-preview__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <div class="mentor-preview__content">
+            <div class="mentor-preview__left">
+                <div class="swiper mentor-preview__slider">
+                    <div class="swiper-wrapper"></div>
+                    <div class="mentor-preview__slider-pagination slider-pagination"></div>
+                </div>
+            </div>
+            <div class="mentor-preview__right">
+                <div class="mentor-preview__info">
+                    <div class="mentor-preview__header">
+                        
+                    </div>
+                    <div class="mentor-preview__body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
 <script src="js/libs/swiper-bundle.min.js"></script>
 <script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/vanilla-calendar.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компоненты</title>
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/libs/vanilla-calendar.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+    <style>
+        .gap {
+            padding: 30px 0;
+        }
+        .divider {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        hr {
+            color: red;
+            border-color: red;
+        }
+        .buttons {
+            padding-bottom: 30px;   
+        }
+        .group-inner {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+    </style>
+<body>
+    <header id="header" class="header header--absolute">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__top">
+                <a href="index.html" class="logo header__logo">
+                    <img class="logo__img header__logo-img" src="img/logo.png" alt="">
+                </a>
+                <div class="header__location">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <a href="mailto:help@terra.com" class="header__email header__contact">
+                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                            </svg>
+                            help@terra.com
+                        </a>
+                        <span class="header__email header__contact">
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                            </svg>
+                            Москва, ул. Большая Андроньевская д. 17А
+                        </span>
+                    </div>
+                    <a href="#" class="header__telegram terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#" class="header__join terra-btn terra-btn--blue">
+                    Вступить
+                </a>
+                <button id="nav-toggle" class="btn header__nav-toggle">
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                    <span class="header__nav-toggle-item"></span>
+                </button>
+            </div>
+            <div id="header-mobile" class="header__bottom">
+                <nav class="nav header__nav">
+                    <ul class="nav__list header__nav-list">
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="about.html">
+                                О клубе
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Наставничество
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Школы и курсы
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item header__nav-item--has-children">
+                            <a class="nav__link header__nav-link" href="#">
+                                Проекты
+                            </a>
+                            <button class="btn header__nav-item-toggle">
+                                <svg viewBox="0 0 12 12" width="12" height="12">
+                                    <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__submenu header__nav-submenu">
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 1
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 2
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 3
+                                    </a>
+                                </li>
+                                <li class="nav__submenu-item header__nav-submenu-item">
+                                    <a href="#" class="nav__submenu-link header__nav-submenu-link">
+                                        Подменю 4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Кейсы
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Календарь
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Спонсорам
+                            </a>
+                        </li>
+                        <li class="nav__item header__nav-item">
+                            <a class="nav__link header__nav-link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__contacts header__contacts--mobile show-md">
+                    <a href="mailto:help@terra.com" class="header__email header__contact">
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.3335 3.33329L7.00016 6.66663L1.66683 3.33329V1.99996L7.00016 5.33329L12.3335 1.99996V3.33329Z" fill="#0075FF" />
+                        </svg>
+                        help@terra.com
+                    </a>
+                    <span class="header__address header__contact">
+                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва, ул. Большая Андроньевская д. 17А
+                    </span>
+                </div>
+                <div class="header__location header__location--mobile show-md">
+                    <button class="btn header__location-button open-modal" data-id="location">
+                        <svg class="header__location-icon-pin" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.2427 2.09062C11.3443 3.19204 11.9743 4.6787 11.9995 6.23623C12.0248 7.79376 11.4433 9.30007 10.378 10.4366L10.2427 10.5766L7.41404 13.4046C7.05512 13.7633 6.57329 13.9722 6.06614 13.9889C5.55899 14.0056 5.06445 13.8289 4.6827 13.4946L4.5867 13.4046L1.75737 10.576C0.632145 9.45073 0 7.9246 0 6.33329C0 4.74198 0.632145 3.21585 1.75737 2.09062C2.88259 0.965397 4.40873 0.333252 6.00004 0.333252C7.59134 0.333252 9.11748 0.965397 10.2427 2.09062ZM6.00004 4.33329C5.73739 4.33329 5.47732 4.38502 5.23467 4.48553C4.99202 4.58604 4.77154 4.73336 4.58582 4.91908C4.4001 5.10479 4.25279 5.32527 4.15228 5.56792C4.05177 5.81057 4.00004 6.07065 4.00004 6.33329C4.00004 6.59593 4.05177 6.856 4.15228 7.09866C4.25279 7.34131 4.4001 7.56179 4.58582 7.7475C4.77154 7.93322 4.99202 8.08054 5.23467 8.18105C5.47732 8.28156 5.73739 8.33329 6.00004 8.33329C6.53047 8.33329 7.03918 8.12258 7.41425 7.7475C7.78932 7.37243 8.00004 6.86372 8.00004 6.33329C8.00004 5.80286 7.78932 5.29415 7.41425 4.91908C7.03918 4.544 6.53047 4.33329 6.00004 4.33329Z" fill="#0075FF" />
+                        </svg>
+                        Москва
+                        <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="social header__social show-md">
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--telegram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--vk header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--youtube header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--instagram header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--tiktok header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <use href="/img/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--googleplay header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1659)">
+                                  <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                  <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                  <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                  <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1659">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item header__social-item">
+                        <a class="social__link social__link--appstore header__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6009_1656)">
+                                  <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6009_1656">
+                                    <rect width="16" height="16" fill="white" />
+                                  </clipPath>
+                                </defs>
+                            </svg>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="content" id="content">
+        <section class="section intro intro-slider">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__info">
+                        <h1 class="intro__title">
+                            <span>Бесплатное обучение</span> от&nbsp;ТОП-предпринимателей и&nbsp;экспертов страны
+                        </h1>
+                        <div class="intro__search">
+                            <form class="intro__search-form">
+                                <div class="intro__search-input">
+                                    <svg class="intro__search-icon" viewBox="0 0 24 24" width="24" height="24">
+                                        <use href="/img/icons/sprite.svg#magnifying-glass"></use>
+                                    </svg>
+                                    <input type="text" name="search" class="intro__search-field" placeholder="Наставники, школы и курсы....">
+                                </div>
+                                <button class="btn intro__search-button">
+                                    Найти
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <ul class="tags intro__tags">
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Программирование
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Дизайн
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Аналитика
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Маркетинг
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Финансы
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag intro__tag" href="#">
+                                    Кино и Музыка
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Управление
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Игры
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Здоровье
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Маркетплейсы
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Английский язык
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Психология
+                                </a>
+                            </li>
+                            <li class="tags__item hide-sm">
+                                <a class="tag intro__tag" href="#">
+                                    Инженерия
+                                </a>
+                            </li>
+                            <li class="tags__item">
+                                <a class="tag tag--green intro__tag" href="#">
+                                    +200 курсов
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro__stats">
+                            <li class="intro__stat">
+                                <span class="intro__stat-number">
+                                    <span class="counter-item" data-number="45000">0</span>+
+                                </span>
+                                <span class="intro__stat-title">
+                                    Участников
+                                </span>
+                            </li> 
+                            <li class="intro__stat">
+                                <span class="intro__stat-number">
+                                    <span class="counter-item" data-number="400">0</span>+
+                                </span>
+                                <span class="intro__stat-title">
+                                    Наставников
+                                </span>
+                            </li> 
+                            <li class="intro__stat">
+                                <span class="intro__stat-number">
+                                    <span class="counter-item" data-number="50">0</span>+
+                                </span>
+                                <span class="intro__stat-title">
+                                    Курсов
+                                </span>
+                            </li> 
+                            <li class="intro__stat">
+                                <span class="intro__stat-number">
+                                    <span class="counter-item" data-number="26">0</span>
+                                </span>
+                                <span class="intro__stat-title">
+                                    Городов
+                                </span>
+                            </li> 
+                            <li class="intro__stat">
+                                <span class="intro__stat-number">
+                                    <span class="counter-item" data-number="6">0</span>
+                                </span>
+                                <span class="intro__stat-title">
+                                    Стран
+                                </span>
+                            </li>
+                        </ul>
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 intro__link xs-stretch">
+                            Вступить и маштабировать свой бизнес
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="intro__right hide-md">
+                        <div class="swiper intro__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide intro__slide swiper-slide-active">
+                                    <img src="img/intro-slide-1.jpg" alt="" class="intro__slide-img" loading="lazy">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
+                                </div>
+                                <div class="swiper-slide intro__slide">
+                                    <img src="img/intro-slide-2.jpg" alt="" class="intro__slide-img" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 1</span>
+        <hr>
+        <section class="section intro intro--inner">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__info">
+                        <h1 class="intro__title">
+                            <span>Миссия клуба&nbsp;</span>&mdash; создать лучшее в&nbsp;России бизнес-обучение
+                        </h1>
+                        <div class="intro__subtitle">
+                            от&nbsp;ведущих предпринимателей страны для квантового роста бизнеса и&nbsp;личности
+                        </div>
+                        <div class="intro__features">
+                            <div class="feature intro__feature">
+                                <i class="feature__icon" aria-hidden="true" 
+                                style="background-image: url(img/icons/gift);"></i>
+                                <div class="feature__title">
+                                    Бесплатно для всех
+                                </div>
+                                <div class="feature__description">
+                                    в нашем сообществе запрещено что-либо продавать
+                                </div>
+                            </div>
+                            <div class="feature intro__feature">
+                                <i class="feature__icon" aria-hidden="true" 
+                                style="background-image: url(img/icons/profile.svg);"></i>
+                                <div class="feature__title">
+                                    Наставники практики
+                                </div>
+                                <div class="feature__description">
+                                    Каждый наставник и спикер ведет свой бизнес и помогает другим
+                                </div>
+                            </div>
+                            <div class="feature intro__feature">
+                                <i class="feature__icon" aria-hidden="true" 
+                                style="background-image: url(img/icons/heart.svg);"></i>
+                                <div class="feature__title">
+                                    Некомерческое сообщество
+                                </div>
+                                <div class="feature__description">
+                                    Терра - это благотворительный проект
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="terra-btn terra-btn--blue terra-btn--58 intro__link intro__link--262 xs-stretch">
+                            Стать участником
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="img/intro-2.png" alt="" class="intro__img hide-md" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 2</span>
+        <hr>
+        <section class="section intro intro-slider mentoring">
+            <div class="intro__inner container mentoring__inner">
+                <div class="intro__info">
+                    <h1 class="intro__title">
+                        <span>Найти наставника</span> - самый короткий путь к успеху
+                    </h1>
+                    <blockquote class="quote mentoring__quote">
+                        <span class="quote__icon">“</span>
+                        <div class="quote__text">
+                            Каждому нужен наставник. Неважно, кто вы - баскетболист, теннисист, гимнаст или игрок в бридж.
+                        </div>
+                        <span class="quote__author">
+                            Билл Гейтс
+                        </span>
+                    </blockquote>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58 mentoring__link xs-stretch">
+                        Найти своего наставника
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="intro__right container">
+                    <div class="swiper intro__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img" loading="lazy">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Александр Ларкин
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro-2.jpg" alt="" class="intro__card-img" loading="lazy">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Георгий Алек
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide intro__slide intro__slide--small">
+                                <div class="intro__card">
+                                    <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img" loading="lazy">
+                                    <div class="intro__card-info">
+                                        <div class="intro__card-title">
+                                            Александр Ларкин
+                                        </div>
+                                        <ul class="tags intro__card-tags">
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Оборот: 120 млн.руб.
+                                                </span>
+                                            </li>
+                                            <li class="intro__card-tag-item">
+                                                <span class="tag intro__card-tag tag--no-hover">
+                                                    Прибыль: 1 млн.руб.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="intro__card-description">
+                                            SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 3</span>
+        <hr>
+        <section class="section intro intro--inner v2">
+            <div class="intro__inner container">
+                <div class="intro__info">
+                    <h1 class="intro__title">
+                        Ментор, учитель и&nbsp;наставник <span>Иван Иванов</span>
+                    </h1>
+                    <div class="intro__card course__intro-card show-md">
+                        <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img course__intro-card-img" loading="lazy">
+                    </div>
+                    <div class="intro__features">
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/suitcase.svg);"></i>
+                            <div class="feature__title">
+                                Годовой оборот
+                            </div>
+                            <div class="feature__description">
+                                120 млн. рублей
+                            </div>
+                        </div>
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/target.svg);"></i>
+                            <div class="feature__title">
+                                Предприниматель
+                            </div>
+                            <div class="feature__description">
+                                С 2020 года
+                            </div>
+                        </div>
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/heart.svg);"></i>
+                            <div class="feature__title">
+                                Чистая прибыль
+                            </div>
+                            <div class="feature__description">
+                                Более 1 млн. Рублей
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__description">
+                        Lorem ipsum dolor sit amet consectetur. Purus cursus nisi ridiculus non. Semper donec tellus amet arcu sed proin. Ut lectus nunc elit varius elementum suspendisse non. Turpis in faucibus interdum diam iaculis nec. Sed nisl odio imperdiet lectus cras. A nunc sit massa lacus ut
+                    </div>
+                    <a href="#" class="terra-btn terra-btn--regular terra-btn--blue terra-btn--58 terra-btn--334 xs-stretch intro__link">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="intro__right hide-md">
+                    <div class="intro__card course__intro-card">
+                        <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img course__intro-card-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 4</span>
+        <hr>
+        <section class="section intro v2">
+            <div class="intro__inner container">
+                <div class="intro__info">
+                    <h1 class="intro__title">
+                        Ментор, учитель и&nbsp;наставник <span>Иван Иванов</span>
+                    </h1>
+                    <div class="intro__card course__intro-card show-md">
+                        <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img course__intro-card-img">
+                        <div class="intro__card-info">
+                            <div class="intro__card-title">
+                                Александр Ларкин
+                            </div>
+                            <ul class="tags intro__card-tags">
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Оборот: 120 млн.руб.
+                                    </span>
+                                </li>
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Прибыль: 1 млн.руб.
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="intro__card-description">
+                                SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__benefits">
+                        <div class="intro__benefit">
+                            <svg width="424" height="100" viewBox="0 0 424 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M251.618 -55.9374C251.618 -35.3322 238.765 -11.3822 206.987 9.32248C175.579 29.7864 129.813 43.7501 77.2228 43.7501C24.6331 43.7501 -21.1329 29.7864 -52.5412 9.32248C-84.3191 -11.3822 -97.1719 -35.3322 -97.1719 -55.9374C-97.1719 -76.5426 -84.3191 -100.493 -52.5412 -121.197C-21.1329 -141.661 24.6331 -155.625 77.2228 -155.625C129.813 -155.625 175.579 -141.661 206.987 -121.197C238.765 -100.493 251.618 -76.5426 251.618 -55.9374Z" stroke="#A0F3FF" stroke-width="80" />
+                            </svg>   
+                            <div class="intro__benefit-inner">
+                                <div class="intro__benefit-title">
+                                    Спринт по достижению цели
+                                </div>
+                                <ul class="tags intro__benefit-tags">
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Программирование
+                                        </span>
+                                    </li>
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Старт
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="intro__benefit" style="--bg-color: #9181FF; --color: #fff">
+                            <svg width="424" height="100" viewBox="0 0 424 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_6081_9703" fill="white">
+                                  <ellipse cx="426.397" cy="-27.2887" rx="214.397" ry="78.6972" />
+                                </mask>
+                                <path d="M560.794 -27.2887C560.794 -37.1625 563.644 -45.1462 566.563 -50.3826C567.945 -52.861 569.254 -54.5815 570.121 -55.6047C570.561 -56.1239 570.914 -56.4951 571.146 -56.728C571.379 -56.9612 571.509 -57.0742 571.511 -57.0765C571.514 -57.0791 571.408 -56.987 571.174 -56.8087C570.941 -56.6307 570.596 -56.3798 570.128 -56.0634C569.179 -55.4222 567.821 -54.5798 565.986 -53.5829C562.263 -51.5599 557.132 -49.201 550.432 -46.7419C522.551 -36.5077 478.711 -28.5916 426.397 -28.5916V131.408C492.492 131.408 555.85 121.708 605.566 103.459C630.104 94.4518 655.571 81.8235 676.381 63.764C696.985 45.8831 720.794 15.36 720.794 -27.2887H560.794ZM426.397 -28.5916C374.083 -28.5916 330.244 -36.5077 302.362 -46.7419C295.663 -49.201 290.532 -51.5599 286.808 -53.5829C284.974 -54.5798 283.615 -55.4222 282.666 -56.0634C282.198 -56.3798 281.854 -56.6307 281.62 -56.8087C281.386 -56.987 281.28 -57.0791 281.283 -57.0765C281.286 -57.0742 281.416 -56.9612 281.649 -56.728C281.881 -56.4951 282.234 -56.1239 282.674 -55.6047C283.541 -54.5815 284.85 -52.861 286.231 -50.3826C289.15 -45.1462 292 -37.1625 292 -27.2887H132C132 15.36 155.81 45.8831 176.414 63.764C197.224 81.8235 222.69 94.4518 247.229 103.459C296.944 121.708 360.303 131.408 426.397 131.408V-28.5916ZM292 -27.2887C292 -17.415 289.15 -9.43123 286.231 -4.19485C284.85 -1.71645 283.541 0.0040741 282.674 1.02724C282.234 1.54642 281.881 1.9176 281.649 2.15057C281.416 2.38371 281.286 2.49671 281.283 2.49902C281.28 2.5016 281.386 2.4095 281.62 2.2312C281.854 2.05321 282.198 1.80231 282.666 1.48589C283.615 0.844742 284.974 0.00233459 286.808 -0.994553C290.532 -3.01757 295.663 -5.37649 302.362 -7.83554C330.244 -18.0698 374.083 -25.9859 426.397 -25.9859V-185.986C360.303 -185.986 296.944 -176.285 247.229 -158.037C222.69 -149.029 197.224 -136.401 176.414 -118.341C155.81 -100.461 132 -69.9375 132 -27.2887H292ZM426.397 -25.9859C478.711 -25.9859 522.551 -18.0698 550.432 -7.83554C557.132 -5.37649 562.263 -3.01757 565.986 -0.994553C567.821 0.00233459 569.179 0.844742 570.128 1.48589C570.596 1.80231 570.941 2.05321 571.174 2.2312C571.408 2.4095 571.514 2.5016 571.511 2.49902C571.509 2.49671 571.379 2.38371 571.146 2.15057C570.914 1.9176 570.561 1.54642 570.121 1.02724C569.254 0.0040741 567.945 -1.71645 566.563 -4.19485C563.644 -9.43123 560.794 -17.415 560.794 -27.2887H720.794C720.794 -69.9375 696.985 -100.461 676.381 -118.341C655.571 -136.401 630.104 -149.029 605.566 -158.037C555.85 -176.285 492.492 -185.986 426.397 -185.986V-25.9859Z" fill="#9E8FFF" mask="url(#path-1-inside-1_6081_9703)" />
+                                <mask id="path-3-inside-2_6081_9703" fill="white">
+                                  <ellipse cx="-21.1717" cy="111.796" rx="132.86" ry="48.7676" />
+                                </mask>
+                                <path d="M31.6879 111.796C31.6879 86.7462 45.7806 72.9892 48.8125 70.3581C52.0502 67.5483 52.0895 68.6532 45.2077 71.1792C32.0817 75.9973 8.62627 80.5634 -21.1717 80.5634V240.563C22.4067 240.563 65.381 234.213 100.341 221.38C117.502 215.081 136.998 205.677 153.682 191.199C170.16 176.899 191.688 150.312 191.688 111.796H31.6879ZM-21.1717 80.5634C-50.9697 80.5634 -74.425 75.9973 -87.5511 71.1792C-94.4329 68.6532 -94.3936 67.5483 -91.1559 70.3581C-88.124 72.9892 -74.0312 86.7462 -74.0312 111.796H-234.031C-234.031 150.312 -212.503 176.899 -196.025 191.199C-179.341 205.677 -159.845 215.081 -142.684 221.38C-107.724 234.213 -64.75 240.563 -21.1717 240.563V80.5634ZM-74.0312 111.796C-74.0312 136.846 -88.124 150.602 -91.1559 153.234C-94.3936 156.043 -94.4329 154.939 -87.5511 152.412C-74.425 147.594 -50.9697 143.028 -21.1717 143.028V-16.9717C-64.75 -16.9717 -107.724 -10.6209 -142.684 2.21143C-159.845 8.51058 -179.341 17.9142 -196.025 32.393C-212.503 46.6931 -234.031 73.2794 -234.031 111.796H-74.0312ZM-21.1717 143.028C8.62627 143.028 32.0817 147.594 45.2077 152.412C52.0895 154.939 52.0502 156.043 48.8125 153.234C45.7806 150.602 31.6879 136.846 31.6879 111.796H191.688C191.688 73.2794 170.16 46.6931 153.682 32.393C136.998 17.9142 117.502 8.51058 100.341 2.21143C65.381 -10.6209 22.4067 -16.9717 -21.1717 -16.9717V143.028Z" fill="#9E8FFF" mask="url(#path-3-inside-2_6081_9703)" />
+                            </svg>
+                            <div class="intro__benefit-inner">
+                                <div class="intro__benefit-title">
+                                    Управление личными финансами
+                                </div>
+                                <ul class="tags intro__benefit-tags">
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Аналитика
+                                        </span>
+                                    </li>
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Старт
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="intro__benefit" style="--bg-color: #FFE6D8;">
+                            <svg width="424" height="100" viewBox="0 0 424 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_6081_9705" fill="white">
+                                  <ellipse cx="426.397" cy="-27.2887" rx="214.397" ry="78.6972" />
+                                </mask>
+                                <path d="M560.794 -27.2887C560.794 -37.1625 563.644 -45.1462 566.563 -50.3826C567.945 -52.861 569.254 -54.5815 570.121 -55.6047C570.561 -56.1239 570.914 -56.4951 571.146 -56.728C571.379 -56.9612 571.509 -57.0742 571.511 -57.0765C571.514 -57.0791 571.408 -56.987 571.174 -56.8087C570.941 -56.6307 570.596 -56.3798 570.128 -56.0634C569.179 -55.4222 567.821 -54.5798 565.986 -53.5829C562.263 -51.5599 557.132 -49.201 550.432 -46.7419C522.551 -36.5077 478.711 -28.5916 426.397 -28.5916V131.408C492.492 131.408 555.85 121.708 605.566 103.459C630.104 94.4518 655.571 81.8235 676.381 63.764C696.985 45.8831 720.794 15.36 720.794 -27.2887H560.794ZM426.397 -28.5916C374.083 -28.5916 330.244 -36.5077 302.362 -46.7419C295.663 -49.201 290.532 -51.5599 286.808 -53.5829C284.974 -54.5798 283.615 -55.4222 282.666 -56.0634C282.198 -56.3798 281.854 -56.6307 281.62 -56.8087C281.386 -56.987 281.28 -57.0791 281.283 -57.0765C281.286 -57.0742 281.416 -56.9612 281.649 -56.728C281.881 -56.4951 282.234 -56.1239 282.674 -55.6047C283.541 -54.5815 284.85 -52.861 286.231 -50.3826C289.15 -45.1462 292 -37.1625 292 -27.2887H132C132 15.36 155.81 45.8831 176.414 63.764C197.224 81.8235 222.69 94.4518 247.229 103.459C296.944 121.708 360.303 131.408 426.397 131.408V-28.5916ZM292 -27.2887C292 -17.415 289.15 -9.43123 286.231 -4.19485C284.85 -1.71645 283.541 0.0040741 282.674 1.02724C282.234 1.54642 281.881 1.9176 281.649 2.15057C281.416 2.38371 281.286 2.49671 281.283 2.49902C281.28 2.5016 281.386 2.4095 281.62 2.2312C281.854 2.05321 282.198 1.80231 282.666 1.48589C283.615 0.844742 284.974 0.00233459 286.808 -0.994553C290.532 -3.01757 295.663 -5.37649 302.362 -7.83554C330.244 -18.0698 374.083 -25.9859 426.397 -25.9859V-185.986C360.303 -185.986 296.944 -176.285 247.229 -158.037C222.69 -149.029 197.224 -136.401 176.414 -118.341C155.81 -100.461 132 -69.9375 132 -27.2887H292ZM426.397 -25.9859C478.711 -25.9859 522.551 -18.0698 550.432 -7.83554C557.132 -5.37649 562.263 -3.01757 565.986 -0.994553C567.821 0.00233459 569.179 0.844742 570.128 1.48589C570.596 1.80231 570.941 2.05321 571.174 2.2312C571.408 2.4095 571.514 2.5016 571.511 2.49902C571.509 2.49671 571.379 2.38371 571.146 2.15057C570.914 1.9176 570.561 1.54642 570.121 1.02724C569.254 0.0040741 567.945 -1.71645 566.563 -4.19485C563.644 -9.43123 560.794 -17.415 560.794 -27.2887H720.794C720.794 -69.9375 696.985 -100.461 676.381 -118.341C655.571 -136.401 630.104 -149.029 605.566 -158.037C555.85 -176.285 492.492 -185.986 426.397 -185.986V-25.9859Z" fill="#FFDDCA" mask="url(#path-1-inside-1_6081_9705)" />
+                                <mask id="path-3-inside-2_6081_9705" fill="white">
+                                  <ellipse cx="-21.1717" cy="111.796" rx="132.86" ry="48.7676" />
+                                </mask>
+                                <path d="M31.6879 111.796C31.6879 86.7462 45.7806 72.9892 48.8125 70.3581C52.0502 67.5483 52.0895 68.6532 45.2077 71.1792C32.0817 75.9973 8.62627 80.5634 -21.1717 80.5634V240.563C22.4067 240.563 65.381 234.213 100.341 221.38C117.502 215.081 136.998 205.677 153.682 191.199C170.16 176.899 191.688 150.312 191.688 111.796H31.6879ZM-21.1717 80.5634C-50.9697 80.5634 -74.425 75.9973 -87.5511 71.1792C-94.4329 68.6532 -94.3936 67.5483 -91.1559 70.3581C-88.124 72.9892 -74.0312 86.7462 -74.0312 111.796H-234.031C-234.031 150.312 -212.503 176.899 -196.025 191.199C-179.341 205.677 -159.845 215.081 -142.684 221.38C-107.724 234.213 -64.75 240.563 -21.1717 240.563V80.5634ZM-74.0312 111.796C-74.0312 136.846 -88.124 150.602 -91.1559 153.234C-94.3936 156.043 -94.4329 154.939 -87.5511 152.412C-74.425 147.594 -50.9697 143.028 -21.1717 143.028V-16.9717C-64.75 -16.9717 -107.724 -10.6209 -142.684 2.21143C-159.845 8.51058 -179.341 17.9142 -196.025 32.393C-212.503 46.6931 -234.031 73.2794 -234.031 111.796H-74.0312ZM-21.1717 143.028C8.62627 143.028 32.0817 147.594 45.2077 152.412C52.0895 154.939 52.0502 156.043 48.8125 153.234C45.7806 150.602 31.6879 136.846 31.6879 111.796H191.688C191.688 73.2794 170.16 46.6931 153.682 32.393C136.998 17.9142 117.502 8.51058 100.341 2.21143C65.381 -10.6209 22.4067 -16.9717 -21.1717 -16.9717V143.028Z" fill="#FFDDCA" mask="url(#path-3-inside-2_6081_9705)" />
+                            </svg>
+                            <div class="intro__benefit-inner">
+                                <div class="intro__benefit-title">
+                                    Управление личными финансами
+                                </div>
+                                <ul class="tags intro__benefit-tags">
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Аналитика
+                                        </span>
+                                    </li>
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Старт
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="intro__benefit" style="--bg-color: #FFDCD6;">
+                            <div class="intro__benefit-inner">
+                                <div class="intro__benefit-title">
+                                    Спринт по достижению цели
+                                </div>
+                                <ul class="tags intro__benefit-tags">
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Программирование
+                                        </span>
+                                    </li>
+                                    <li class="intro__benefit-tag-item">
+                                        <span class="tag tag--no-hover tag--blue intro__benefit-tag">
+                                            Старт
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="terra-btn terra-btn--regular terra-btn--blue terra-btn--58 terra-btn--334 xs-stretch intro__link">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="intro__right hide-md">
+                    <div class="intro__card course__intro-card">
+                        <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img course__intro-card-img">
+                        <div class="intro__card-info">
+                            <div class="intro__card-title">
+                                Александр Ларкин
+                            </div>
+                            <ul class="tags intro__card-tags">
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Оборот: 120 млн.руб.
+                                    </span>
+                                </li>
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Прибыль: 1 млн.руб.
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="intro__card-description">
+                                SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 5</span>
+        <hr>
+        <section class="section intro intro--inner">
+            <div class="intro__inner container">
+                <div class="intro__info">
+                    <h1 class="intro__title">
+                        Ментор, учитель и&nbsp;наставник <span>Иван Иванов</span>
+                    </h1>
+                    <div class="intro__features">
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/suitcase.svg);"></i>
+                            <div class="feature__title">
+                                Годовой оборот
+                            </div>
+                            <div class="feature__description">
+                                120 млн. рублей
+                            </div>
+                        </div>
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/target.svg);"></i>
+                            <div class="feature__title">
+                                Предприниматель
+                            </div>
+                            <div class="feature__description">
+                                С 2020 года
+                            </div>
+                        </div>
+                        <div class="feature intro__feature">
+                            <i class="feature__icon" aria-hidden="true" style="background-image: url(img/icons/heart.svg);"></i>
+                            <div class="feature__title">
+                                Чистая прибыль
+                            </div>
+                            <div class="feature__description">
+                                Более 1 млн. Рублей
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__description">
+                        Lorem ipsum dolor sit amet consectetur. Purus cursus nisi ridiculus non. Semper donec tellus amet arcu sed proin. Ut lectus nunc elit varius elementum suspendisse non. Turpis in faucibus interdum diam iaculis nec. Sed nisl odio imperdiet lectus cras. A nunc sit massa lacus ut
+                    </div>
+                    <a href="#" class="terra-btn terra-btn--regular terra-btn--blue terra-btn--58 terra-btn--334 xs-stretch intro__link">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                    </a>
+                </div>
+                <img src="img/mentor-circle.png" alt="" class="intro__img hide-md">
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 6</span>
+        <hr>
+        <section class="section intro intro--inner">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__info">
+                        <h1 class="intro__title">
+                            <span>Миссия клуба&nbsp;</span>— создать лучшее в&nbsp;России бизнес-обучение
+                        </h1>
+                        <div class="intro__description">
+                            Lorem ipsum dolor sit amet consectetur. Purus cursus nisi ridiculus non. Semper donec tellus amet arcu sed proin. Ut lectus nunc elit varius elementum suspendisse non. Turpis in faucibus interdum diam iaculis nec. Sed nisl odio imperdiet lectus cras. A nunc sit massa lacus ut
+                        </div>
+                        <a href="#" class="terra-btn terra-btn--regular terra-btn--blue terra-btn--58 terra-btn--334 xs-stretch intro__link">
+                            Подробнее
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="img/intro-circle-small.png" alt="" class="intro__img small hide-md">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Intro 7</span>
+        <hr>
+        <section class="section intro course__intro">
+            <div class="intro__inner container course__intro-inner">
+                <div class="intro__info course__intro-info">
+                    <h1 class="intro__title">
+                        Школа построения <span class="blue">отделов продаж</span>
+                    </h1>
+                    <ul class="params course__intro-params">
+                        <li class="params__item">
+                            <span class="params__item-icon" style="background-image: url(img/icons/clock-outline.svg);"></span>
+                            <span class="params__item-title">
+                                <span>40</span> часов
+                            </span>
+                        </li>
+                        <li class="params__item">
+                            <span class="params__item-icon" style="background-image: url(img/icons/graduation-cap.svg);"></span>
+                            <span class="params__item-title">
+                                <span>100</span> уроков
+                            </span>
+                        </li>
+                        <li class="params__item">
+                            <span class="params__item-icon" style="background-image: url(img/icons/comment-dots.svg);"></span>
+                            <span class="params__item-title">
+                                <span>4</span> личные встречи
+                            </span>
+                        </li>
+                        <li class="params__item">
+                            <span class="params__item-icon" style="background-image: url(img/icons/coins.svg);"></span>
+                            <span class="params__item-title">
+                                Доход <span>1 млн+</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58 terra-btn--334 xs-stretch">
+                        Записаться
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="intro__right">
+                    <div class="intro__card course__intro-card">
+                        <img src="img/mentoring-intro.jpg" alt="" class="intro__card-img course__intro-card-img" loading="lazy">
+                        <div class="intro__card-info">
+                            <div class="intro__card-title">
+                                Александр Ларкин
+                            </div>
+                            <ul class="tags intro__card-tags">
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Оборот: 120 млн.руб.
+                                    </span>
+                                </li>
+                                <li class="intro__card-tag-item">
+                                    <span class="tag intro__card-tag tag--no-hover">
+                                        Прибыль: 1 млн.руб.
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="intro__card-description">
+                                SEO продвижение интернет-магазинов, построение отдела продаж, найм, масштабирование компании
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <span class="divider">Buttons</span>
+        <hr>
+        <div class="buttons">
+            <div class="container">
+                <div class="group-inner">
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58 terra-btn--334">
+                        Blue button 334px
+                    </a>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--58">
+                        Blue button auto width
+                    </a>
+                    <a href="#" class="terra-btn terra-btn--outline terra-btn--52">
+                        Outline button
+                        <svg viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="terra-btn terra-btn--blue terra-btn--blue-outline terra-btn--58 terra-btn--334">
+                        Outline blue button
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <use href="/img/icons/sprite.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="terra-btn youtube-button xs-stretch">
+                        Смотреть на YouTube
+                        <svg viewBox="0 0 30 30" width="30" height="30">
+                            <use href="/img/icons/sprite.svg#youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="terra-btn terra-btn--white terra-btn--52">
+                        Записаться
+                        <svg viewBox="0 0 12 12" width="12" height="12">
+                            <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <span class="divider">Video small image absolute</span>
+        <hr>
+        <div class="videos gap">
+            <div class="container">
+                <a class="video video-v2 video--small" href="https://www.youtube.com/watch?v=k0Zx6KRPgpw&amp;ab_channel=%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D1%88%D0%BA%D0%BE%D0%BB%D0%B0Terra" data-fancybox="video">
+                    <span class="video__play">
+                        <svg viewBox="0 0 28 28" width="28" height="28">
+                            <use href="/img/icons/sprite.svg#play"></use>
+                        </svg>
+                    </span>
+                    <div class="video__info">
+                        <div class="video__title">
+                            Наставники
+                        </div>
+                        <div class="video__subtitle">
+                            Иван Иванов
+                        </div>
+                        <ul class="params video__params">
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/icons/star.svg);"></span>
+                                <span class="params__item-title">
+                                    Уровень: <span>Запуск</span>
+                                </span>
+                            </li>
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/icons/briefcase.svg);"></span>
+                                <span class="params__item-title">
+                                    Стаж: 4 года
+                                </span>
+                            </li>
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/icons/coins.svg);"></span>
+                                <span class="params__item-title">
+                                    Прибыль: 1.5 млрд в год
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="img/video-bg-2.png" alt="" class="video__img" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <hr>
+        <span class="divider">Video big</span>
+        <hr>
+        <div class="videos gap">
+            <div class="container">
+                <a class="video video-v2" href="https://www.youtube.com/watch?v=k0Zx6KRPgpw&amp;ab_channel=%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D1%88%D0%BA%D0%BE%D0%BB%D0%B0Terra" data-fancybox="video">
+                    <span class="video__play">
+                        <svg viewBox="0 0 28 28" width="28" height="28">
+                            <use href="/img/icons/sprite.svg#play"></use>
+                        </svg>
+                    </span>
+                    <div class="video__info">
+                        <div class="video__title">
+                            Наставники
+                        </div>
+                        <div class="video__subtitle">
+                            Иван Иванов
+                        </div>
+                        <ul class="params video__params">
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/course-mentor-icon-1.svg);"></span>
+                                <span class="params__item-title">
+                                    Уровень: <span>Запуск</span>
+                                </span>
+                            </li>
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/icons/briefcase.svg);"></span>
+                                <span class="params__item-title">
+                                    Стаж: 4 года
+                                </span>
+                            </li>
+                            <li class="params__item">
+                                <span class="params__item-icon" style="background-image: url(img/icons/coins.svg);"></span>
+                                <span class="params__item-title">
+                                    Прибыль: 1.5 млрд в год
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="img/video-mockup.png" alt="" class="video__img" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <hr>
+        <span class="divider">Tags</span>
+        <hr>
+        <div class="tag-group gap">
+            <div class="container">
+                <div class="group-inner">
+                    <button class="btn tag tag--gray">Blue tag</button>
+                    <button class="btn tag tag--green">Green tag</button>
+                    <button class="btn tag tag--gray tag--no-hover">No hover</button>
+                    <button class="btn tag">White</button>
+                    <button class="btn tag" style="--bg-color: #9181FF; --color: #fff">With custom text & background color</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <span class="divider">Form fields</span>
+        <hr>
+        <div class="form-elements gap">
+            <div class="container">
+                <div class="group-inner">
+                    <input class="form__field" type="text" placeholder="Field">
+                    <label class="filter-form__radio form__radio">
+                        <input id="public" type="radio" name="event_type">
+                        <i aria-hidden="true"></i>
+                        <span for="public">
+                            Radio button
+                        </span>
+                    </label>
+                    <label class="form__checkbox">
+                        <input type="checkbox" name="format">
+                        <i aria-hidden="true"></i>
+                        <span>
+                            Toggle checkbox
+                        </span>
+                    </label>
+                    <div class="range form__range list__range" style="margin: 5px 0">
+                        <div class="range__track"></div>
+                        <input class="range__input range__input--left" type="range" min="1" max="100" value="30">
+                        <input class="range__input range__input--right" type="range" min="1" max="100" value="70">
+                        <div class="range__values">
+                            <div class="range__value range__value--left">
+                                От: <span>30</span> дней
+                            </div>
+                            <div class="range__value range__value--right">
+                                До: <span>70</span> дней
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-form__item">
+                        <div class="filter-form__item-title">
+                            Checkboxes with dropdown
+                        </div>
+                        <div class="filter-form__checkboxes">
+                            <label class="form__checkbox form__checkbox--rect">
+                                <input type="checkbox" name="all">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    All
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect">
+                                <input type="checkbox" name="ivan" checked="">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Иван Иванов
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect">
+                                <input type="checkbox" name="anton">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Антон Антонович
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect">
+                                <input type="checkbox" name="aleksandr">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Александр Александрович
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                            <label class="form__checkbox form__checkbox--rect filter-form__field--hidden">
+                                <input type="checkbox" name="sergey">
+                                <i aria-hidden="true"></i>
+                                <span>
+                                    Сергей Сергеев
+                                </span>
+                            </label>
+                        </div>
+                        <button type="button" class="btn filter-form__toggle-items" data-toggled-text="Hide" data-default-text="More">
+                            <span>More</span>
+                            <svg class="header__location-icon-angle" viewBox="0 0 12 12" width="12" height="12">
+                                <use href="/img/icons/sprite.svg#chevron-right-thin"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="navigation">
+    <div class="container">
+        <div class="navigation__inner">
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Школы по направлениям
+                </div>
+                <ul class="navigation__list navigation__list--two-col">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Программирование</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Дизайн</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Аналитика</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетинг</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Управление</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Финансы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кино и музыка</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Маркетплейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Инженерия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Психология</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Здоровье</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Английский язык</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Все школы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Клуб Терра
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">О клубе</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Кейсы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мероприятия</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Спонсорам</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Блог</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Наставничество
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Наставники</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Старт</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Запуск</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Прорыв</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Опора</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link navigation__list-link--blue">Стать наставником</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item-title">
+                    Проекты
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Благотворительность</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Точка Биффуркации</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Игры</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастер-классы</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Мастермайнды</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#" class="navigation__list-link">Поединки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <a href="#" class="logo footer__logo">
+                    <img class="logo__img footer__logo-img" src="img/logo-white.png">
+                </a>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__item footer__item--description">
+                    <div class="footer__description">
+                        <p>
+                            Терра&nbsp;&mdash; это некоммерческий клуб предпринимателей, объединённых идеей достичь всеобщего благополучия.
+                        </p>
+                        <p>
+                            Глобальная миссией Терры&nbsp;&mdash; борьба с&nbsp;бедностью и&nbsp;нереализованностью людей через обучение людей построению бизнеса.
+                        </p>
+                    </div>
+                    <ul class="social footer__social">
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--telegram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--vk footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--youtube footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--instagram footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item footer__social-item">
+                            <a class="social__link social__link--tiktok footer__social-link" href="#" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 30 30" width="30" height="30">
+                                    <use href="/img/icons/sprite.svg#tiktok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item footer__item--contacts">
+                    <div class="footer__contacts">
+                        <a class="footer__contact footer__contact--email" href="mailto:info@club-terra.ru">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#envelope"></use>
+                            </svg>
+                            info@club-terra.ru
+                        </a>
+                        <div class="footer__contact footer__contact--address">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <use href="/img/icons/sprite.svg#map-pin"></use>
+                            </svg>
+                            115487, Россия, Москва, <br> Пресненская наб. 12 Башня "Федерация"
+                        </div>
+                    </div>
+                    <div class="footer__apps">
+                        <div class="footer__app">
+                            <a class="footer__app-item footer__app-item--appstore" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1656)">
+                                      <path d="M3.64933 13.5322L3.248 14.1602C3.11093 14.3931 2.88756 14.5626 2.62634 14.6319C2.36512 14.7011 2.08713 14.6646 1.85267 14.5302C1.73686 14.4645 1.63524 14.3765 1.55368 14.2713C1.47212 14.1661 1.41225 14.0457 1.37752 13.9172C1.3428 13.7886 1.33392 13.6545 1.3514 13.5225C1.36887 13.3905 1.41236 13.2633 1.47933 13.1482L1.73333 12.7762C1.83133 12.6376 2.072 12.3976 2.55333 12.4429C2.55333 12.4429 3.68667 12.5649 3.76867 13.1482C3.76867 13.1482 3.78 13.3402 3.64933 13.5322ZM14.9787 9.4469H12.5687C12.4047 9.43624 12.3333 9.37824 12.3047 9.34424L12.3033 9.3409L10 5.60757C9.74667 5.22357 9.344 6.20557 9.344 6.20557C8.86333 7.30024 9.412 8.5449 9.604 8.9209L12.752 14.1589C12.8891 14.3918 13.1124 14.5613 13.3737 14.6305C13.6349 14.6998 13.9129 14.6633 14.1473 14.5289C14.2631 14.4632 14.3648 14.3752 14.4463 14.27C14.5279 14.1647 14.5878 14.0444 14.6225 13.9158C14.6572 13.7873 14.6661 13.6532 14.6486 13.5212C14.6311 13.3892 14.5876 13.262 14.5207 13.1469L13.6253 11.6096C13.608 11.5722 13.5773 11.4716 13.7613 11.4709H14.9787C15.5427 11.4709 16 11.0176 16 10.4589C16 9.90024 15.5427 9.4469 14.9787 9.4469ZM9.176 10.8229C9.176 10.8229 9.30467 11.4709 8.80667 11.4709H1.02133C0.457333 11.4709 0 11.0176 0 10.4589C0 9.90024 0.457333 9.4469 1.02133 9.4469H3.31133C3.68133 9.42557 3.76867 9.21424 3.76867 9.21424L3.77067 9.21557L6.76 4.08624C6.77682 4.05415 6.78561 4.01846 6.78561 3.98224C6.78561 3.94601 6.77682 3.91032 6.76 3.87824L5.77333 2.18424C5.70636 2.06917 5.66287 1.94196 5.6454 1.80997C5.62792 1.67798 5.6368 1.54384 5.67152 1.41531C5.70625 1.28678 5.76612 1.16641 5.84768 1.06117C5.92924 0.955939 6.03086 0.867928 6.14667 0.802237C6.38119 0.667644 6.65935 0.631007 6.92072 0.700284C7.1821 0.76956 7.40559 0.939154 7.54267 1.17224L8 1.95824L8.45667 1.17357C8.59374 0.940667 8.81711 0.771201 9.07833 0.701934C9.33954 0.632667 9.61754 0.669187 9.852 0.803571C9.96786 0.869206 10.0695 0.957175 10.1512 1.06238C10.2328 1.16759 10.2927 1.28795 10.3275 1.41649C10.3623 1.54503 10.3712 1.67919 10.3538 1.8112C10.3364 1.94322 10.2929 2.07046 10.226 2.18557L6.06667 9.32357C6.04867 9.3669 6.04333 9.4349 6.17867 9.4469H7.54267C7.54267 9.4469 8.98 9.49357 9.176 10.8229Z" fill="#FAFAFA" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1656">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>    
+                            </a>
+                            <a class="footer__app-item footer__app-item--googleplay" target="_blank" rel="noopener noreferrer" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6009_1659)">
+                                      <path d="M7.47217 7.62793L0.0664062 14.6467C0.149572 14.9133 0.299024 15.1592 0.503337 15.3656C0.707651 15.5719 0.961416 15.7333 1.24523 15.8373C1.52905 15.9414 1.83541 15.9853 2.14089 15.9659C2.44637 15.9464 2.74288 15.864 3.00776 15.7249L11.3406 11.4319L7.47217 7.62793Z" fill="#EA4335" />
+                                      <path d="M14.9613 6.43446L11.3579 4.56738L7.30176 7.78717L11.3744 11.4214L14.9503 9.57431C15.2671 9.42426 15.5325 9.19863 15.7176 8.92188C15.9027 8.64514 16.0006 8.32783 16.0006 8.00436C16.0006 7.68088 15.9027 7.36358 15.7176 7.08683C15.5325 6.81009 15.2671 6.58446 14.9503 6.43441L14.9613 6.43446Z" fill="#FBBC04" />
+                                      <path d="M0.0662702 1.32812C0.0215065 1.47783 -0.00077673 1.6323 2.06645e-05 1.78738V14.1875C0.000484776 14.3425 0.0227466 14.4969 0.0662702 14.6468L7.7259 7.80773L0.0662702 1.32812Z" fill="#4285F4" />
+                                      <path d="M7.52735 7.98723L11.3572 4.56769L3.03539 0.25459C2.72228 0.0887143 2.36617 0.00086969 2.00333 3.46744e-06C1.1029 -0.00157957 0.31128 0.539028 0.0664062 1.32292L7.52735 7.98723Z" fill="#34A853" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_6009_1659">
+                                        <rect width="16" height="16" fill="white" />
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#" class="footer__app-link" target="_blank" rel="noopener noreferrer">
+                            Скачать приложение Терры
+                        </a>
+                    </div>
+                    <a href="#" class="footer__bot-link terra-btn terra-btn--blue">
+                        Перейти в бота
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6009_1668)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 4.42997C20.0218 4.32596 20.2923 4.29008 20.558 4.32608C20.8237 4.36208 21.0749 4.46863 21.2854 4.63465C21.4959 4.80067 21.6581 5.02008 21.7551 5.27005C21.852 5.52002 21.8802 5.79141 21.8367 6.05597L19.5687 19.813C19.3487 21.14 17.8927 21.901 16.6757 21.24C15.6577 20.687 14.1457 19.835 12.7857 18.946C12.1057 18.501 10.0227 17.076 10.2787 16.062C10.4987 15.195 13.9987 11.937 15.9987 9.99997C16.7837 9.23897 16.4257 8.79997 15.4987 9.49997C13.1967 11.238 9.5007 13.881 8.2787 14.625C7.2007 15.281 6.6387 15.393 5.9667 15.281C4.7407 15.077 3.6037 14.761 2.6757 14.376C1.4217 13.856 1.4827 12.132 2.6747 11.63L19.7747 4.42997Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6009_1668">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__item footer__item--subscribe">
+                    <div class="footer__subscribe">
+                        <div class="footer__subscribe-title">
+                            Введите ваш email, чтобы всегда быть в курсе последних обновлений
+                        </div>
+                        <form class="footer__subscribe-form">
+                            <input type="email" name="email" required placeholder="E-mail" class="footer__subscribe-field">
+                            <button class="btn terra-btn terra-btn--blue footer__subscribe-submit">
+                                Подписаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="footer__copyright-text">
+                    © 2022 “TERRA – Некоммерческий клуб предпринимателей”
+                </div>
+                <a href="#" class="footer__copyright-link">
+                    ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="location" class="modal location" tabindex="0">
+    <div class="modal__inner location__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <h2 class="modal__title location__title">
+            Выберите город
+        </h2>
+        <div class="location__content">
+            <input class="search-input location__search" type="text" data-list=".location__list" placeholder="Поиск">
+            <ul class="location__list">
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link location__list-link--current">
+                        Москва
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Санкт-Петербург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новосибирск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Екатеринбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Казань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Нижний Новгород
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Челябинск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Самара
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Омск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ростов-на-Дону
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Уфа
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Красноярск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Воронеж
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пермь
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Волгоград
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Краснодар
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тюмень
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ижевск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Барнаул
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ульяновск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иркутск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Хабаровск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Ярославль
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Владивосток
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Махачкала
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Томск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Оренбург
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Кемерово
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Новокузнецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Рязань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Астрахань
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Пенза
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Липецк
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Тула
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Киров
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Чебоксары
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Курск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Брянск
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Иваново
+                    </a>
+                </li>
+                <li class="location__list-item">
+                    <a href="#" class="location__list-link">
+                        Магнитогорск
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="mentor-preview" class="modal mentor-preview" tabindex="0">
+    <div class="modal__inner mentor-preview__inner">
+        <button class="btn modal__close">
+            Закрыть модальное окно
+        </button>
+        <div class="mentor-preview__content">
+            <div class="mentor-preview__left">
+                <div class="swiper mentor-preview__slider">
+                    <div class="swiper-wrapper"></div>
+                    <div class="mentor-preview__slider-pagination slider-pagination"></div>
+                </div>
+            </div>
+            <div class="mentor-preview__right">
+                <div class="mentor-preview__info">
+                    <div class="mentor-preview__header">
+                        
+                    </div>
+                    <div class="mentor-preview__body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/vanilla-calendar.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
